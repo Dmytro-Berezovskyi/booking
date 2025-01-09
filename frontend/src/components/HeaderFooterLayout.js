@@ -1,6 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+import ModalLayout from "./ModalLayout";
+
 import { Layout, Menu, theme } from "antd";
 
 const { Header, Content, Footer } = Layout;
@@ -67,6 +69,8 @@ export default function HeaderFooterLayout () {
                     items={items}
                     style={{flex: 1, minWidth: 0}}
                 />
+
+                <ModalLayout />
             </Header>
             <Content
                 style={{
