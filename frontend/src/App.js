@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Hotels from "./pages/Hotels";
 import OneHotel from "./pages/OneHotel/OneHotel";
+import Registration from "./pages/Registration";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         {
             path: "/hotel/:id",
             element: <OneHotel />,
+        },
+        {
+            path: "/registration",
+            element: <Registration />,
         },
         {
             path: "*",
