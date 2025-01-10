@@ -86,10 +86,10 @@ export default function ModalLayout() {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button block type="primary" htmlType="submit">
+                            <Button block type="primary" htmlType="submit" onClick={handleCancel}>
                                 Log in
                             </Button>
-                            <span>You don't have on account? <NavLink to="/signup">Sign up</NavLink></span>
+                            <span>You don't have on account? <NavLink to="/signup" onClick={handleCancel}>Sign up</NavLink></span>
                         </Form.Item>
                     </Form>
                 </div>
