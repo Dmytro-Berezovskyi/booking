@@ -42,7 +42,7 @@ export default function ModalLayout() {
                 onCancel={handleCancel}
                 footer={null}
             >
-                <h1 style={{textAlign: "center"}}>Login</h1>
+                <h1 style={{textAlign: "center"}}>Log In</h1>
                 <div style={{display: "flex", justifyContent: "center", margin: "50px"}}>
                     <Form
                         name="login"
@@ -89,7 +89,7 @@ export default function ModalLayout() {
                             <Button block type="primary" htmlType="submit">
                                 Log in
                             </Button>
-                            or <a href="">Register now!</a>
+                            <span>You don't have on account? <NavLink to="/signup">Sign up</NavLink></span>
                         </Form.Item>
                     </Form>
                 </div>
