@@ -8,7 +8,7 @@ import { fetchSelectedHotels } from "../../store/thunks/selectedHotelsThunk";
 
 import DestinationHotels from "./DestinationHotels"
 
-import { Select, DatePicker, Button, Divider } from "antd";
+import { Select, DatePicker, Button, Divider, Flex } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 export default function Home() {
@@ -72,106 +72,109 @@ export default function Home() {
             >
                 {({ setFieldValue, setFieldTouched, values }) => (
                     <Form style={{display: "flex", gap: "10px", justifyContent: "center"}}>
-                        <div style={{display: "flex", flexDirection: "column"}}>
-                            <div style={{display: "flex", gap: "10px", justifyContent: "center"}}>
-                                <Field name="destination">
-                                    {({ field }) => (
-                                        <Select
-                                            {...field}
-                                            showSearch
-                                            style={{ width: 200 }}
-                                            placeholder="Destination"
-                                            optionFilterProp="label"
-                                            filterSort={(optionA, optionB) =>
-                                                (optionA?.label ?? "").toLowerCase().localeCompare((optionB?.label ?? "").toLowerCase())
-                                            }
-                                            onChange={(values) => setFieldValue("destination", values)}
-                                            options={destination.destination}
-                                        />
-                                    )}
-                                </Field>
+                        <Flex vertical>
+                            <Flex gap="10px">
+                                <Flex gap="10px" justify="center">
+                                    <Field name="destination">
+                                        {({field}) => (
+                                            <Select
+                                                {...field}
+                                                showSearch
+                                                style={{width: 200}}
+                                                placeholder="Destination"
+                                                optionFilterProp="label"
+                                                filterSort={(optionA, optionB) =>
+                                                    (optionA?.label ?? "").toLowerCase().localeCompare((optionB?.label ?? "").toLowerCase())
+                                                }
+                                                onChange={(values) => setFieldValue("destination", values)}
+                                                options={destination.destination}
+                                            />
+                                        )}
+                                    </Field>
+                                    <Field name="checkIn">
+                                        {({field}) => (
+                                            <DatePicker
+                                                {...field}
+                                                value={values.checkIn ? dayjs(values.checkIn) : null}
+                                                onChange={(date) => setFieldValue("checkIn", date ? date.format("YYYY-MM-DD") : null)}
+                                                onBlur={() => setFieldTouched("checkIn", true)}
+                                                needConfirm
+                                                placeholder="Check In"
+                                            />
+                                        )}
+                                    </Field>
+                                    <Field name="checkOut">
+                                        {({field}) => (
+                                            <DatePicker
+                                                {...field}
+                                                value={values.checkOut ? dayjs(values.checkOut) : null}
+                                                onChange={(date) => setFieldValue("checkOut", date ? date.format("YYYY-MM-DD") : null)}
+                                                onBlur={() => setFieldTouched("checkIn", true)}
+                                                needConfirm
+                                                placeholder="Check Out"
+                                            />
+                                        )}
+                                    </Field>
+                                </Flex>
 
-                                <Field name="checkIn">
-                                    {({ field }) => (
-                                        <DatePicker
-                                            {...field}
-                                            value={values.checkIn ? dayjs(values.checkIn) : null}
-                                            onChange={(date) => setFieldValue("checkIn", date ? date.format("YYYY-MM-DD") : null)}
-                                            onBlur={() => setFieldTouched("checkIn", true)}
-                                            needConfirm
-                                            placeholder="Check In"
-                                        />
-                                    )}
-                                </Field>
+                                <Flex gap="10px" justify="center">
+                                    <div style={{
+                                        border: "1px solid #d9d9d9",
+                                        borderRadius: "6px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        height: "100%"
+                                    }}>
+                                        <Button
+                                            onClick={() => setFieldValue("adults", values.adults - 1)}
+                                            style={{border: "none", height: "100%", marginRight: "5px"}}
+                                            disabled={values.adults === 1}
+                                        >
+                                            <MinusOutlined style={{fontSize: "14px"}}/>
+                                        </Button>
+                                        <span>Adults {values.adults}</span>
+                                        <Button
+                                            onClick={() => setFieldValue("adults", values.adults + 1)}
+                                            style={{border: "none", height: "100%", marginLeft: "5px"}}
+                                            disabled={values.adults === 4}
+                                        >
+                                            <PlusOutlined style={{fontSize: "14px"}}/>
+                                        </Button>
+                                    </div>
 
-                                <Field name="checkOut">
-                                    {({ field }) => (
-                                        <DatePicker
-                                            {...field}
-                                            value={values.checkOut ? dayjs(values.checkOut) : null}
-                                            onChange={(date) => setFieldValue("checkOut", date ? date.format("YYYY-MM-DD") : null)}
-                                            onBlur={() => setFieldTouched("checkIn", true)}
-                                            needConfirm
-                                            placeholder="Check Out"
-                                        />
-                                    )}
-                                </Field>
-                            </div>
+                                    <div style={{
+                                        border: "1px solid #d9d9d9",
+                                        borderRadius: "6px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        height: "100%"
+                                    }}>
+                                        <Button
+                                            onClick={() => setFieldValue("children", values.children - 1)}
+                                            style={{border: "none", height: "100%", marginRight: "5px"}}
+                                            disabled={values.children === 0}
+                                        >
+                                            <MinusOutlined style={{fontSize: "14px"}}/>
+                                        </Button>
+                                        <span>Children {values.children}</span>
+                                        <Button
+                                            onClick={() => setFieldValue("children", values.children + 1)}
+                                            style={{border: "none", height: "100%", marginLeft: "5px"}}
+                                            disabled={values.children === 5}
+                                        >
+                                            <PlusOutlined style={{fontSize: "14px"}}/>
+                                        </Button>
+                                    </div>
+
+                                    <Button type="primary" htmlType="submit">Submit</Button>
+                                </Flex>
+                            </Flex>
+
                             <ErrorMessage name="destination" component="div" style={{color: "red", marginTop: "10px"}}/>
                             <ErrorMessage name="checkIn" component="span" style={{color: "red", marginTop: "10px"}}/>
-                        </div>
+                        </Flex>
 
-                        <div style={{display: "flex", gap: "10px", justifyContent: "center"}}>
-                            <div style={{
-                                border: "1px solid #d9d9d9",
-                                borderRadius: "6px",
-                                display: "flex",
-                                alignItems: "center",
-                                height: "100%"
-                            }}>
-                                <Button
-                                    onClick={() => setFieldValue("adults", values.adults - 1)}
-                                    style={{border: "none", height: "100%", marginRight: "5px"}}
-                                    disabled={values.adults === 1}
-                                >
-                                    <MinusOutlined style={{fontSize: "14px"}}/>
-                                </Button>
-                                <span>Adults {values.adults}</span>
-                                <Button
-                                    onClick={() => setFieldValue("adults", values.adults + 1)}
-                                    style={{border: "none", height: "100%", marginLeft: "5px"}}
-                                    disabled={values.adults === 4}
-                                >
-                                    <PlusOutlined style={{fontSize: "14px"}}/>
-                                </Button>
-                            </div>
 
-                            <div style={{
-                                border: "1px solid #d9d9d9",
-                                borderRadius: "6px",
-                                display: "flex",
-                                alignItems: "center",
-                                height: "100%"
-                            }}>
-                                <Button
-                                    onClick={() => setFieldValue("children", values.children - 1)}
-                                    style={{border: "none", height: "100%", marginRight: "5px"}}
-                                    disabled={values.children === 0}
-                                >
-                                    <MinusOutlined style={{fontSize: "14px"}}/>
-                                </Button>
-                                <span>Children {values.children}</span>
-                                <Button
-                                    onClick={() => setFieldValue("children", values.children + 1)}
-                                    style={{border: "none", height: "100%", marginLeft: "5px"}}
-                                    disabled={values.children === 5}
-                                >
-                                    <PlusOutlined style={{fontSize: "14px"}}/>
-                                </Button>
-                            </div>
-
-                            <Button type="primary" htmlType="submit">Submit</Button>
-                        </div>
 
                     </Form>
                 )}
