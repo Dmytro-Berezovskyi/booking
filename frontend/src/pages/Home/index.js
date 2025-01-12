@@ -117,57 +117,60 @@ export default function Home() {
                                     </Field>
                                 </Flex>
 
-                                <Flex gap="10px" justify="center">
-                                    <div style={{
-                                        border: "1px solid #d9d9d9",
-                                        borderRadius: "6px",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        height: "100%"
-                                    }}>
-                                        <Button
-                                            onClick={() => setFieldValue("adults", values.adults - 1)}
-                                            style={{border: "none", height: "100%", marginRight: "5px"}}
-                                            disabled={values.adults === 1}
-                                        >
-                                            <MinusOutlined style={{fontSize: "14px"}}/>
-                                        </Button>
-                                        <span>Adults {values.adults}</span>
-                                        <Button
-                                            onClick={() => setFieldValue("adults", values.adults + 1)}
-                                            style={{border: "none", height: "100%", marginLeft: "5px"}}
-                                            disabled={values.adults === 4}
-                                        >
-                                            <PlusOutlined style={{fontSize: "14px"}}/>
-                                        </Button>
-                                    </div>
 
-                                    <div style={{
-                                        border: "1px solid #d9d9d9",
-                                        borderRadius: "6px",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        height: "100%"
-                                    }}>
-                                        <Button
-                                            onClick={() => setFieldValue("children", values.children - 1)}
-                                            style={{border: "none", height: "100%", marginRight: "5px"}}
-                                            disabled={values.children === 0}
-                                        >
-                                            <MinusOutlined style={{fontSize: "14px"}}/>
-                                        </Button>
-                                        <span>Children {values.children}</span>
-                                        <Button
-                                            onClick={() => setFieldValue("children", values.children + 1)}
-                                            style={{border: "none", height: "100%", marginLeft: "5px"}}
-                                            disabled={values.children === 5}
-                                        >
-                                            <PlusOutlined style={{fontSize: "14px"}}/>
-                                        </Button>
-                                    </div>
+                                    <Flex gap="10px" justify="center">
+                                        <div style={{
+                                            border: "1px solid #d9d9d9",
+                                            borderRadius: "6px",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            height: "100%"
+                                        }}>
+                                            <Button
+                                                onClick={() => setFieldValue("adults", values.adults - 1)}
+                                                style={{border: "none", height: "100%", marginRight: "5px"}}
+                                                disabled={values.adults === 1}
+                                            >
+                                                <MinusOutlined style={{fontSize: "14px"}}/>
+                                            </Button>
+                                            <span>Adults {values.adults}</span>
+                                            <Button
+                                                onClick={() => setFieldValue("adults", values.adults + 1)}
+                                                style={{border: "none", height: "100%", marginLeft: "5px"}}
+                                                disabled={values.adults === 4}
+                                            >
+                                                <PlusOutlined style={{fontSize: "14px"}}/>
+                                            </Button>
+                                        </div>
 
-                                    <Button type="primary" htmlType="submit">Submit</Button>
-                                </Flex>
+                                        <div style={{
+                                            border: "1px solid #d9d9d9",
+                                            borderRadius: "6px",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            height: "100%"
+                                        }}>
+                                            <Button
+                                                onClick={() => setFieldValue("children", values.children - 1)}
+                                                style={{border: "none", height: "100%", marginRight: "5px"}}
+                                                disabled={values.children === 0}
+                                            >
+                                                <MinusOutlined style={{fontSize: "14px"}}/>
+                                            </Button>
+                                            <span>Children {values.children}</span>
+                                            <Button
+                                                onClick={() => setFieldValue("children", values.children + 1)}
+                                                style={{border: "none", height: "100%", marginLeft: "5px"}}
+                                                disabled={values.children === 5}
+                                            >
+                                                <PlusOutlined style={{fontSize: "14px"}}/>
+                                            </Button>
+                                        </div>
+
+                                        <Button type="primary" htmlType="submit">Submit</Button>
+                                    </Flex>
+
+
                             </Flex>
 
                             <ErrorMessage name="destination" component="div" style={{color: "red", marginTop: "10px"}}/>
