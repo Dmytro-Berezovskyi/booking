@@ -1,9 +1,12 @@
-import { NavLink, Outlet } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+import { toggleThemeMode } from "../store/slices/themeSlice";
 
 import ModalLayout from "./ModalLayout";
 
-import { Layout, Menu, theme } from "antd";
+import { ConfigProvider, Layout, Menu, theme, Switch } from "antd";
+import { SunOutlined, MoonOutlined } from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;
 
@@ -23,11 +26,20 @@ const items = [
 ];
 
 export default function HeaderFooterLayout () {
+    const themeMode = useSelector((state) => state.theme.themeMode);
+    const dispatch = useDispatch();
     const location = useLocation();
     const currentPath = location.pathname;
+    console.log(themeMode);
+
+    const switchOnChange = (checked) => {
+        dispatch(toggleThemeMode());
+    };
 
     const {
-        token: { colorBgContainer, borderRadiusLG },
+        token: {
+            colorBgContainer, borderRadiusLG,
+        },
     } = theme.useToken();
 
     return (
@@ -42,6 +54,7 @@ export default function HeaderFooterLayout () {
                     alignItems: "center",
                     marginBottom: "50px"
                 }}
+                theme={themeMode}
             >
                 <NavLink to={"/"} style={{
                     border: "3px solid white",
@@ -63,14 +76,18 @@ export default function HeaderFooterLayout () {
                 </NavLink>
 
                 <Menu
-                    theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={currentPath}
                     items={items}
                     style={{flex: 1, minWidth: 0}}
+                    theme={themeMode}
                 />
-
                 <ModalLayout />
+                <Switch
+                    checkedChildren={<SunOutlined />}
+                    unCheckedChildren={<MoonOutlined />}
+                    onChange={switchOnChange}
+                />
             </Header>
             <Content
                 style={{
