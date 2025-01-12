@@ -43,66 +43,87 @@ export default function HeaderFooterLayout () {
     } = theme.useToken();
 
     return (
-        <Layout>
-            <Header
-                style={{
-                    position: "sticky",
-                    top: 0,
-                    zIndex: 1,
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "50px"
-                }}
-                theme={themeMode}
-            >
-                <NavLink to={"/"} style={{
-                    border: "3px solid white",
-                    padding: "5px",
-                    marginRight: "10px",
-                    height: "85%",
-                    display: "flex",
-                    alignItems: "center"
-                }}>
-                    <h1 style={{
-                        textTransform: "uppercase",
-                        fontWeight: "800",
-                        fontSize: "20px",
-                        margin: 0,
-                        color: "white"
-                    }}>
-                        Plan&Stay
-                    </h1>
-                </NavLink>
-
-                <Menu
-                    mode="horizontal"
-                    defaultSelectedKeys={currentPath}
-                    items={items}
-                    style={{flex: 1, minWidth: 0}}
+        <ConfigProvider
+            theme={{
+                components: {
+                    Switch: {
+                        colorPrimary: "rgb(177,197,238)",
+                        colorPrimaryHover: "rgb(177,197,238)",
+                        handleBg: (themeMode === "dark" ? "rgb(206,178,149)" : "rgb(255,213,118)")
+                    },
+                    Layout: {
+                        headerBg: (themeMode === "dark" ? "#001529" : "#ffffff"),
+                    },
+                },
+            }}
+        >
+            <Layout>
+                <Header
+                    style={{
+                        position: "sticky",
+                        top: 0,
+                        zIndex: 1,
+                        width: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: "50px"
+                    }}
                     theme={themeMode}
-                />
-                <ModalLayout />
-                <Switch
-                    checkedChildren={<SunOutlined />}
-                    unCheckedChildren={<MoonOutlined />}
-                    onChange={switchOnChange}
-                />
-            </Header>
-            <Content
-                style={{
-                    padding: "48px 48px",
-                    margin: "0 48px",
-                    background: colorBgContainer,
-                    minHeight: "82vh",
-                    borderRadius: borderRadiusLG,
-                }}
-            >
-                <Outlet />
-            </Content>
-            <Footer style={{ textAlign: "center" }}>
-                Ant Design ©{new Date().getFullYear()} Created by Ant UED
-            </Footer>
-        </Layout>
+                >
+                    <NavLink to={"/"} style={{
+                        border: "3px solid white",
+                        borderColor: (themeMode === "dark" ? "#ffffff" : "#000000"),
+                        padding: "5px",
+                        marginRight: "10px",
+                        height: "85%",
+                        display: "flex",
+                        alignItems: "center"
+                    }}>
+                        <h1 style={{
+                            textTransform: "uppercase",
+                            fontWeight: "800",
+                            fontSize: "20px",
+                            margin: 0,
+                            color: (themeMode === "dark" ? "#FFFFFF" : "#000000")
+                        }}>
+                            Plan&Stay
+                        </h1>
+                    </NavLink>
+
+                    <Menu
+                        mode="horizontal"
+                        defaultSelectedKeys={currentPath}
+                        items={items}
+                        style={{flex: 1, minWidth: 0}}
+                        theme={themeMode}
+                    />
+                    <ModalLayout />
+
+                    <Switch
+                        checkedChildren={<SunOutlined />}
+                        unCheckedChildren={<MoonOutlined />}
+                        onChange={switchOnChange}
+                        style={{}}
+                    />
+
+                </Header>
+                <Content
+                    style={{
+                        padding: "48px 48px",
+                        margin: "0 48px",
+                        background: colorBgContainer,
+                        minHeight: "82vh",
+                        borderRadius: borderRadiusLG,
+                    }}
+                >
+                    <Outlet />
+                </Content>
+                <Footer style={{ textAlign: "center" }}>
+                    Ant Design ©{new Date().getFullYear()} Created by Ant UED
+                </Footer>
+            </Layout>
+        </ConfigProvider>
     )
 }
+
+//rgb(255,213,118)
