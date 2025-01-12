@@ -1,10 +1,12 @@
 import { useState } from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import {useSelector} from "react-redux";
 
 import { Modal, Button, Checkbox, Form, Input, Flex } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 export default function ModalLayout() {
+    const themeMode = useSelector((state) => state.theme.themeMode);
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
 
@@ -33,7 +35,7 @@ export default function ModalLayout() {
     return (
         <>
             <button style={{background: "none", border: "none", cursor: "pointer"}} onClick={showModal}>
-                <UserOutlined style={{color: "white", fontSize: "20px"}}/>
+                <UserOutlined style={{color: (themeMode === "dark" ? "#ffffff" : "rgba(0,0,0,0.85)"), fontSize: "20px"}}/>
             </button>
             <Modal
                 open={open}
