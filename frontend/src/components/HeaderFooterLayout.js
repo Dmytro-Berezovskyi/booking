@@ -53,6 +53,7 @@ export default function HeaderFooterLayout () {
                     },
                     Layout: {
                         headerBg: (themeMode === "dark" ? "#001529" : "#ffffff"),
+                        bodyBg: (themeMode === "dark" ? "#707070" : "#f5f5f5"),
                     },
                 },
             }}
