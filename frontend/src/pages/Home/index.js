@@ -15,6 +15,7 @@ export default function Home() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    const themeMode = useSelector(state => state.theme.themeMode);
     const destination = useSelector((state) => state.destination);
     const selectedHotels = useSelector((state) => state.selectedHotels);
     const [submitted, setSubmitted] = useState(false);
@@ -133,7 +134,7 @@ export default function Home() {
                                             >
                                                 <MinusOutlined style={{fontSize: "14px"}}/>
                                             </Button>
-                                            <span>Adults {values.adults}</span>
+                                            <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>Adults {values.adults}</span>
                                             <Button
                                                 onClick={() => setFieldValue("adults", values.adults + 1)}
                                                 style={{border: "none", height: "100%", marginLeft: "5px"}}
@@ -157,7 +158,7 @@ export default function Home() {
                                             >
                                                 <MinusOutlined style={{fontSize: "14px"}}/>
                                             </Button>
-                                            <span>Children {values.children}</span>
+                                            <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>Children {values.children}</span>
                                             <Button
                                                 onClick={() => setFieldValue("children", values.children + 1)}
                                                 style={{border: "none", height: "100%", marginLeft: "5px"}}
@@ -169,23 +170,25 @@ export default function Home() {
 
                                         <Button type="primary" htmlType="submit">Submit</Button>
                                     </Flex>
-
-
                             </Flex>
 
                             <ErrorMessage name="destination" component="div" style={{color: "red", marginTop: "10px"}}/>
                             <ErrorMessage name="checkIn" component="span" style={{color: "red", marginTop: "10px"}}/>
                         </Flex>
-
-
-
                     </Form>
                 )}
             </Formik>
 
             <div style={{width: "100%", marginLeft: "auto", marginRight: "auto"}}>
-                <Divider orientation="left">
-                    <h1 style={{textTransform: "uppercase", fontWeight: "800", fontSize: "25px", margin: 0}}>
+                <Divider orientation="left" style={{borderColor: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>
+                    <h1
+                        style={{
+                                textTransform: "uppercase",
+                                fontWeight: "800",
+                                fontSize: "25px",
+                                margin: 0,
+                                color: (themeMode === "dark" ? "#FFFFFF" : "#000000")
+                    }}>
                         Plan&Stay - your ideal place is just a few clicks away!
                     </h1>
                 </Divider>

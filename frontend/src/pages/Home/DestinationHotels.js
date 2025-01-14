@@ -1,14 +1,17 @@
+import {NavLink} from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import PropTypes from "prop-types";
 
 import { Col, Divider, Row } from "antd";
 
-import {NavLink} from "react-router-dom";
-
 export default function DestinationHotels({ selectedHotels }) {
+    const themeMode = useSelector((state) => state.theme.themeMode);
+
     return (
         <>
             {!selectedHotels || selectedHotels.length === 0 ? (
-                <p style={{width: "60%"}}>
+                <p style={{width: "60%", fontSize: "20px", fontWeight: 400, color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>
                     Plan&Stay is a modern booking platform dedicated to making travel planning seamless and stress-free.
                     Whether you're looking for a cozy getaway, a luxurious retreat, or a budget-friendly option, we
                     bring

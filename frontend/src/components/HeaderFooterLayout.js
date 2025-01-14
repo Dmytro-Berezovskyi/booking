@@ -54,6 +54,8 @@ export default function HeaderFooterLayout () {
                     Layout: {
                         headerBg: (themeMode === "dark" ? "#001529" : "#ffffff"),
                         bodyBg: (themeMode === "dark" ? "#707070" : "#f5f5f5"),
+                        footerBg: (themeMode === "dark" ? "#707070" : "#f5f5f5"),
+                        triggerColor: (themeMode === "dark" ? "#001529" : "#ffffff"),
                     },
                 },
             }}
@@ -112,7 +114,7 @@ export default function HeaderFooterLayout () {
                     style={{
                         padding: "48px 48px",
                         margin: "0 48px",
-                        background: colorBgContainer,
+                        background: (themeMode === "dark" ? "#001529" : "#ffffff"),
                         minHeight: "82vh",
                         borderRadius: borderRadiusLG,
                     }}
