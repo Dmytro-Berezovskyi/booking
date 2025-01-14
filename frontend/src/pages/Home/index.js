@@ -180,7 +180,7 @@ export default function Home() {
             </Formik>
 
             <div style={{width: "100%", marginLeft: "auto", marginRight: "auto"}}>
-                <Divider orientation="left" style={{borderColor: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>
+                <Divider orientation="left" style={{borderColor: (themeMode === "dark" ? "rgba(255,255,255,0.20)" : "rgba(5,5,5,0.06)")}}>
                     <h1
                         style={{
                                 textTransform: "uppercase",
