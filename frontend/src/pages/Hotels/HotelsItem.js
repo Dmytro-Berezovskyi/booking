@@ -7,6 +7,7 @@ import {Col, Divider, Pagination, Row} from "antd";
 import {LoadingOutlined} from "@ant-design/icons";
 
 export default function HotelsItem() {
+    const themeMode = useSelector((state) => state.theme.themeMode);
     const hotels = useSelector((state) => state.hotels)
     const dispatch = useDispatch();
 
@@ -31,8 +32,8 @@ export default function HotelsItem() {
                                     </div>
                                     <h3>{hotel.name}</h3>
                                 </NavLink>
-                                <span>City: {hotel.city}</span>
-                                <span>Address: {hotel.address}</span>
+                                <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>City: {hotel.city}</span>
+                                <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>Address: {hotel.address}</span>
                             </div>
 
                             <Divider style={{borderWidth: "3px"}}/>
