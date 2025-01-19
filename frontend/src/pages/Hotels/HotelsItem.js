@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchHotels } from "../../store/thunks/hotelsThunk";
 
-import {Col, Divider, Pagination, Row} from "antd";
-import {LoadingOutlined} from "@ant-design/icons";
+import { Col, Divider, Pagination, Row, ConfigProvider } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+
+import "./style.css";
 
 export default function HotelsItem() {
     const themeMode = useSelector((state) => state.theme.themeMode);
@@ -45,14 +47,26 @@ export default function HotelsItem() {
                     <span style={{fontSize: "20px"}}>Loading...</span>
                 </div>
             )}
+            <ConfigProvider
+                theme={{
+                    components: {
+                        Pagination: {
+                            itemHoverBg: "#ffffff"
+                        },
+                    },
+                }}
+            >
+            <div className={(themeMode === "dark" ? "dark" : "light")}>
+                <Pagination
+                    align="center"
+                    current={hotels.currentPage}
+                    total={hotels.total}
+                    pageSize={6}
+                    onChange={handlePageChange}
+                />
+            </div>
 
-            <Pagination
-                align="center"
-                current={hotels.currentPage}
-                total={hotels.total}
-                pageSize={6}
-                onChange={handlePageChange}
-            />
+            </ConfigProvider>
         </>
     )
 }

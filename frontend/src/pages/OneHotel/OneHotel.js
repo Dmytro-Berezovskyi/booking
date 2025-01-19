@@ -9,6 +9,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 export default function OneHotel() {
     const { id } = useParams();
+    const themeMode = useSelector((state) => state.theme.themeMode);
     const hotel = useSelector(state => state.oneHotel.hotel);
     const dispatch = useDispatch();
 
@@ -27,19 +28,39 @@ export default function OneHotel() {
                         />
                     </div>
                     <div style={{width: "90%", marginLeft: "auto", marginRight: "auto"}}>
-                        <Divider orientation="left">
-                            <h1 style={{textTransform: "uppercase", fontWeight: "800",fontSize: "25px", margin: 0}}>{hotel.name}
+                        <Divider
+                            orientation="left"
+                            style={{borderColor: (themeMode === "dark" ? "rgba(255,255,255,0.20)" : "rgba(5,5,5,0.06)")}}
+                        >
+                            <h1 style={{
+                                textTransform: "uppercase",
+                                fontWeight: "800",
+                                fontSize: "25px",
+                                margin: 0,
+                                color: (themeMode === "dark" ? "#ffffff" : "#111111")}}
+                            >
+                                {hotel.name}
                                 <Rate disabled value={hotel?.hotel_rating || 0} style={{marginLeft: "15px"}} />
                             </h1>
                         </Divider>
 
                         <div style={{display: "flex", gap: "20px"}}>
-                            <span style={{color: "rgba(0,0,0,0.5)", fontStyle: "italic"}}>City: {hotel.city} {hotel.country_code}</span>
-                            <span style={{color: "rgba(0,0,0,0.5)", fontStyle: "italic"}}>Address: {hotel.address}</span>
+                            <span style={{
+                                    fontStyle: "italic",
+                                    color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")}}
+                            >
+                                City: {hotel.city} {hotel.country_code}
+                            </span>
+                            <span style={{
+                                fontStyle: "italic",
+                                color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")}}
+                            >
+                                Address: {hotel.address}
+                            </span>
                             {hotel.phone_number ? (
                                 <span style={{
-                                    color: "rgba(0,0,0,0.5)",
-                                    fontStyle: "italic"
+                                    fontStyle: "italic",
+                                    color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")
                                 }}>
                                     Phone number: {hotel.phone_number}
                                 </span>
@@ -47,8 +68,8 @@ export default function OneHotel() {
                             {hotel.website ? (
                                 <a href={hotel.website} target="_blank" rel="noopener noreferrer">
                                     <span style={{
-                                        color: "rgba(0,0,0,0.5)",
-                                        fontStyle: "italic"
+                                        fontStyle: "italic",
+                                        color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")
                                     }}>
                                     Website: {hotel.website}
                                 </span>
@@ -57,7 +78,13 @@ export default function OneHotel() {
 
                         </div>
 
-                        <p style={{fontWeight: "600", fontSize: "18px"}}>{hotel.description}</p>
+                        <p style={{
+                            fontWeight: "600",
+                            fontSize: "18px",
+                            color: (themeMode === "dark" ? "#ffffff" : "#111111")}}
+                        >
+                            {hotel.description}
+                        </p>
                     </div>
 
                 </div>

@@ -11,6 +11,8 @@ import DestinationHotels from "./DestinationHotels"
 import { Select, DatePicker, Button, Divider, Flex } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
+import "./style.css";
+
 export default function Home() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -120,13 +122,15 @@ export default function Home() {
 
 
                                     <Flex gap="10px" justify="center">
-                                        <div style={{
+                                        <div
+                                            style={{
                                             border: "1px solid #d9d9d9",
                                             borderRadius: "6px",
                                             display: "flex",
                                             alignItems: "center",
-                                            height: "100%"
-                                        }}>
+                                            height: "100%"}}
+                                            className={(themeMode === "dark" ? "dark" : "light")}
+                                        >
                                             <Button
                                                 onClick={() => setFieldValue("adults", values.adults - 1)}
                                                 style={{border: "none", height: "100%", marginRight: "5px"}}
@@ -144,13 +148,15 @@ export default function Home() {
                                             </Button>
                                         </div>
 
-                                        <div style={{
+                                        <div
+                                            style={{
                                             border: "1px solid #d9d9d9",
                                             borderRadius: "6px",
                                             display: "flex",
                                             alignItems: "center",
-                                            height: "100%"
-                                        }}>
+                                            height: "100%"}}
+                                            className={(themeMode === "dark" ? "dark" : "light")}
+                                        >
                                             <Button
                                                 onClick={() => setFieldValue("children", values.children - 1)}
                                                 style={{border: "none", height: "100%", marginRight: "5px"}}
