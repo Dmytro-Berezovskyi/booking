@@ -34,8 +34,12 @@ export default function DestinationHotels({ selectedHotels }) {
                                         </div>
                                         <h3>{hotel.name}</h3>
                                     </NavLink>
-                                    <span>City: {hotel.city}</span>
-                                    <span>Address: {hotel.address}</span>
+                                    <span style={{color: (themeMode === "dark" ? "#ffffff" : "#111111")}}>
+                                        City: {hotel.city}
+                                    </span>
+                                    <span style={{color: (themeMode === "dark" ? "#ffffff" : "#111111")}}>
+                                        Address: {hotel.address}
+                                    </span>
                                 </div>
                                 <Divider style={{borderWidth: "3px"}}/>
                             </Col>

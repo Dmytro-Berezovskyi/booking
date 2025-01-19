@@ -1,0 +1,26 @@
+.dark > .ant-pagination > .ant-pagination-item:not(.ant-pagination-item-active):hover {
+    background-color: #b4b2b2 !important;
+}
+.dark > .ant-pagination > .ant-pagination-next > .ant-pagination-item-link > .anticon > svg {
+    color: #fff !important;
+}
+
+.dark > .ant-pagination > .ant-pagination-prev > .ant-pagination-item-link > .anticon > svg {
+    color: #fff !important;
+}
+
+.dark > .ant-pagination > .ant-pagination-jump-next > .ant-pagination-item-link > .ant-pagination-item-container > .anticon > svg {
+    color: #fff !important;
+}
+
+.dark > .ant-pagination > .ant-pagination-jump-next > .ant-pagination-item-link > .ant-pagination-item-container > .ant-pagination-item-ellipsis {
+    color: #fff !important;
+}
+
+.dark > .ant-pagination > .ant-pagination-jump-prev > .ant-pagination-item-link > .ant-pagination-item-container > .anticon > svg {
+    color: #fff !important;
+}
+
+.dark > .ant-pagination > .ant-pagination-jump-prev > .ant-pagination-item-link > .ant-pagination-item-container > .ant-pagination-item-ellipsis {
+    color: #fff !important;
+}
