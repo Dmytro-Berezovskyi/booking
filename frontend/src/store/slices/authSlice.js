@@ -9,7 +9,13 @@ const initialState = {
 const authSlice = createSlice({
     name: "users",
     initialState,
-    reducers: {},
+    reducers: {
+        pushUser: (state, action) => {
+            state.users = action.payload;
+        }
+    },
 })
+
+export const { pushUser } = authSlice.actions;
 
 export default authSlice.reducer;
