@@ -1,14 +1,39 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {useSelector} from "react-redux";
+import {Field, Formik} from "formik";
+import { auth } from "../firebaseConfig";
 
-import { Modal, Button, Checkbox, Form, Input, Flex } from "antd";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
+import { Modal, Button, Checkbox, Form,Input, Flex } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
+    const users = useSelector((state) => state.users);
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
+
+    const initialValues = {
+        email: null,
+        password: null,
+    }
+
+    const validate = () => {
+
+    }
+
+    const handleLogin =  async (values, { resetForm }) => {
+        try {
+            await signInWithEmailAndPassword(auth, values.email, values.password);
+            alert("Login successful!");
+        } catch (err) {
+           console.log(err);
+        }
+
+        resetForm();
+    }
 
     const showModal = () => {
         setOpen(true);
@@ -37,65 +62,84 @@ export default function ModalLayout() {
             <button style={{background: "none", border: "none", cursor: "pointer"}} onClick={showModal}>
                 <UserOutlined style={{color: (themeMode === "dark" ? "#ffffff" : "rgba(0,0,0,0.85)"), fontSize: "20px"}}/>
             </button>
-            <Modal
-                open={open}
-                onOk={handleOk}
-                confirmLoading={confirmLoading}
-                onCancel={handleCancel}
-                footer={null}
+            <Formik
+                initialValues={initialValues}
+                validate={validate}
+                onSubmit={handleLogin}
             >
-                <h1 style={{textAlign: "center"}}>Log In</h1>
-                <div style={{display: "flex", justifyContent: "center", margin: "50px"}}>
-                    <Form
-                        name="login"
-                        initialValues={{
-                            remember: true,
-                        }}
-                        style={{
-                            maxWidth: 360,
-                        }}
-                        onFinish={onFinish}
+                {({ setFieldValue, setFieldTouched, values }) => (
+                    <Modal
+                        open={open}
+                        onOk={handleOk}
+                        confirmLoading={confirmLoading}
+                        onCancel={handleCancel}
+                        footer={null}
                     >
-                        <Form.Item
-                            name="username"
-                            rules={[
-                                {
-                                    required: true,
-                                    message: 'Please input your Username!',
-                                },
-                            ]}
-                        >
-                            <Input prefix={<UserOutlined />} placeholder="Username" />
-                        </Form.Item>
-                        <Form.Item
-                            name="password"
-                            rules={[
-                                {
-                                    required: true,
-                                    message: 'Please input your Password!',
-                                },
-                            ]}
-                        >
-                            <Input prefix={<LockOutlined />} type="password" placeholder="Password" />
-                        </Form.Item>
-                        <Form.Item>
-                            <Flex justify="space-between" align="center">
-                                <Form.Item name="remember" valuePropName="checked" noStyle>
-                                    <Checkbox>Remember me</Checkbox>
-                                </Form.Item>
-                                <a href="">Forgot password</a>
-                            </Flex>
-                        </Form.Item>
+                        <h1 style={{textAlign: "center"}}>Log In</h1>
+                        <div style={{display: "flex", justifyContent: "center", margin: "50px"}}>
+                            <Form
+                                name="login"
+                                initialValues={{
+                                    remember: true,
+                                }}
+                                style={{
+                                    maxWidth: 360,
+                                }}
+                                onFinish={onFinish}
+                            >
+                                <Form.Item
+                                    name="username"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please input your Username!',
+                                        },
+                                    ]}
+                                >
+                                    <Field>
+                                        {({field}) => (
+                                            <Input {...field} prefix={<UserOutlined />} placeholder="Username" />
+                                        )}
+                                    </Field>
 
-                        <Form.Item>
-                            <Button block type="primary" htmlType="submit" onClick={handleCancel}>
-                                Log in
-                            </Button>
-                            <span>You don't have on account? <NavLink to="/registration" onClick={handleCancel}>Sign up</NavLink></span>
-                        </Form.Item>
-                    </Form>
-                </div>
-            </Modal>
+                                </Form.Item>
+                                <Form.Item
+                                    name="password"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please input your Password!',
+                                        },
+                                    ]}
+                                >
+                                    <Field>
+                                        {({field}) => (
+                                            <Input {...field} prefix={<LockOutlined />} type="password" placeholder="Password" />
+                                        )}
+                                    </Field>
+
+                                </Form.Item>
+                                <Form.Item>
+                                    <Flex justify="space-between" align="center">
+                                        <Form.Item name="remember" valuePropName="checked" noStyle>
+                                            <Checkbox>Remember me</Checkbox>
+                                        </Form.Item>
+                                        <a href="">Forgot password</a>
+                                    </Flex>
+                                </Form.Item>
+
+                                <Form.Item>
+                                    <Button block type="primary" htmlType="submit" onClick={handleCancel}>
+                                        Log in
+                                    </Button>
+                                    <span>You don't have on account? <NavLink to="/registration" onClick={handleCancel}>Sign up</NavLink></span>
+                                </Form.Item>
+                            </Form>
+                        </div>
+                    </Modal>
+                )}
+            </Formik>
+
         </>
     )
 }

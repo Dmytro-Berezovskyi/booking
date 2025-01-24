@@ -1,6 +1,7 @@
-import {NavLink} from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {Form, Field, Formik} from "formik";
+
+import { pushUser } from "../../store/slices/authSlice";
 
 import ModalLayout from "../../components/ModalLayout";
 
@@ -8,18 +9,19 @@ import {Button, Divider, Flex, Input,} from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 
 export default function Registration() {
-    const users = useSelector((state) => state.users);
     const dispatch = useDispatch();
 
     const initialValues = {
-        email: "",
-        password: "",
+        email: null,
+        password: null,
     }
 
-    const handleRegistration = (values) => {
+    const handleRegistration = (values, { resetForm }) => {
+        dispatch(pushUser(values));
 
-    }
-    ;
+        resetForm();
+    };
+
     const validate = (values) => {
 
     }
@@ -67,7 +69,6 @@ export default function Registration() {
                             type="primary"
                             htmlType="submit"
                             style={{width: "100%", marginBottom: "20px"}}
-                            onClick={handleRegistration}
                         >
                             Continue
                         </Button>
