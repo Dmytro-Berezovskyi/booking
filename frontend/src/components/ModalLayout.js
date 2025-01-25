@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {useSelector} from "react-redux";
-import {Field, Formik} from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { auth } from "../firebaseConfig";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-import { Modal, Button, Checkbox, Form,Input, Flex } from "antd";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { Modal, Button, Checkbox, Input, Flex } from "antd";
+import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
@@ -16,23 +16,41 @@ export default function ModalLayout() {
     const [confirmLoading, setConfirmLoading] = useState(false);
 
     const initialValues = {
-        email: null,
-        password: null,
+        email: "",
+        password: "",
     }
 
-    const validate = () => {
+    const validate = (values) => {
+        const errors = {};
 
+        if (!values.email) {
+            errors.email =
+                <div>
+                    <span>Enter your email address</span>
+                </div>
+        }
+
+        if (!values.password) {
+            errors.password =
+                <div>
+                    <span>Enter your password</span>
+                </div>
+        }
+
+        return errors;
     }
-
+    console.log(users);
     const handleLogin =  async (values, { resetForm }) => {
         try {
             await signInWithEmailAndPassword(auth, values.email, values.password);
             alert("Login successful!");
+            resetForm();
+            setOpen(false);
         } catch (err) {
-           console.log(err);
+            alert("Login failed: " + err.message);
+            console.log(err);
         }
-
-        resetForm();
+        //setSubmitting(false);
     }
 
     const showModal = () => {
@@ -67,7 +85,8 @@ export default function ModalLayout() {
                 validate={validate}
                 onSubmit={handleLogin}
             >
-                {({ setFieldValue, setFieldTouched, values }) => (
+                {({ setFieldValue, setFieldTouched, isSubmitting, values }) => (
+
                     <Modal
                         open={open}
                         onOk={handleOk}
@@ -77,63 +96,35 @@ export default function ModalLayout() {
                     >
                         <h1 style={{textAlign: "center"}}>Log In</h1>
                         <div style={{display: "flex", justifyContent: "center", margin: "50px"}}>
-                            <Form
-                                name="login"
-                                initialValues={{
-                                    remember: true,
-                                }}
-                                style={{
-                                    maxWidth: 360,
-                                }}
-                                onFinish={onFinish}
-                            >
-                                <Form.Item
-                                    name="username"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your Username!',
-                                        },
-                                    ]}
-                                >
-                                    <Field>
+                            <Form style={{maxWidth: "360px", display: "flex", flexDirection: "column", gap: "25px"}}>
+
+                                <Flex vertical gap="2px">
+                                    <Field name="email">
                                         {({field}) => (
-                                            <Input {...field} prefix={<UserOutlined />} placeholder="Username" />
+                                            <Input {...field} prefix={<MailOutlined />} placeholder="Email"/>
                                         )}
                                     </Field>
+                                    <ErrorMessage name="email" component="div" style={{color: "red"}}/>
+                                </Flex>
 
-                                </Form.Item>
-                                <Form.Item
-                                    name="password"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your Password!',
-                                        },
-                                    ]}
-                                >
-                                    <Field>
+                                <Flex vertical gap="2px">
+                                    <Field name="password">
                                         {({field}) => (
-                                            <Input {...field} prefix={<LockOutlined />} type="password" placeholder="Password" />
+                                            <Input {...field} prefix={<LockOutlined />} type="password" placeholder="Password"/>
                                         )}
                                     </Field>
+                                    <ErrorMessage name="password" component="div" style={{color: "red"}}/>
+                                </Flex>
 
-                                </Form.Item>
-                                <Form.Item>
-                                    <Flex justify="space-between" align="center">
-                                        <Form.Item name="remember" valuePropName="checked" noStyle>
-                                            <Checkbox>Remember me</Checkbox>
-                                        </Form.Item>
-                                        <a href="">Forgot password</a>
-                                    </Flex>
-                                </Form.Item>
+                                <Flex justify="space-between" align="center">
+                                    <Checkbox>Remember me</Checkbox>
+                                    <a href="">Forgot password</a>
+                                </Flex>
 
-                                <Form.Item>
-                                    <Button block type="primary" htmlType="submit" onClick={handleCancel}>
-                                        Log in
-                                    </Button>
-                                    <span>You don't have on account? <NavLink to="/registration" onClick={handleCancel}>Sign up</NavLink></span>
-                                </Form.Item>
+                                <Button block type="primary" htmlType="submit" loading={isSubmitting}>
+                                    Log in
+                                </Button>
+                                <span>You don't have on account? <NavLink to="/registration" onClick={handleCancel}>Sign up</NavLink></span>
                             </Form>
                         </div>
                     </Modal>
