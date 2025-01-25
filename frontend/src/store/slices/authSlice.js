@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { auth } from "../../firebaseConfig";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const initialState = {
     users: [],
@@ -12,6 +14,9 @@ const authSlice = createSlice({
     reducers: {
         pushUser: (state, action) => {
             state.users = action.payload;
+        },
+        createUserInFirebase: (state, action) => {
+            createUserWithEmailAndPassword(auth, state.users.email, )
         }
     },
 })

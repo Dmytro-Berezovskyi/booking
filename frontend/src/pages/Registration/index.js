@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import {Form, Field, Formik} from "formik";
+import { auth } from "../../firebaseConfig";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 import { pushUser } from "../../store/slices/authSlice";
 
 import ModalLayout from "../../components/ModalLayout";
 
-import {Button, Divider, Flex, Input,} from "antd";
+import {Button, Divider, Input} from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 
 export default function Registration() {
@@ -16,7 +18,9 @@ export default function Registration() {
         password: null,
     }
 
-    const handleRegistration = (values, { resetForm }) => {
+    const handleRegistration = async (values, { resetForm }) => {
+        await createUserWithEmailAndPassword(auth, values.email, values.password);
+
         dispatch(pushUser(values));
 
         resetForm();
@@ -77,14 +81,6 @@ export default function Registration() {
                     </Form>
                 )}
             </Formik>
-            <Flex style={{width: "25%", marginLeft: "auto", marginRight: "auto"}} vertical align="center">
-                <h1>Sign Up</h1>
-                <Input size="large" style={{marginBottom: "20px" }} placeholder="Pleas anter your email*" prefix={<MailOutlined />}/>
-                <Input size="large" style={{marginBottom: "20px" }} placeholder="Pleas anter password*" prefix={<LockOutlined />}/>
-                <Button size="large" type="primary" htmlType="submit" style={{width: "100%", marginBottom: "20px"}} onClick={handleRegistration}>Continue</Button>
-                <span>Already have an account? <a>Sign in</a></span>
-                <Divider>or</Divider>
-            </Flex>
         </>
     )
 }

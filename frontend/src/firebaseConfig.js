@@ -5,7 +5,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 const firebaseConfig = {
-    apiKey: API_KEY,
+    apiKey: "API_KEY",
     authDomain: "petprojectbooking.firebaseapp.com",
     projectId: "petprojectbooking",
     storageBucket: "petprojectbooking.firebasestorage.app",
