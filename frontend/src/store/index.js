@@ -14,6 +14,6 @@ export const store = configureStore({
         hotels: hotelsReducer,
         selectedHotels: selectedHotelsSlice,
         oneHotel: oneHotelSlice,
-        users: authReducer
+        user: authReducer
     }
 })
