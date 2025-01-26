@@ -51,18 +51,18 @@ export default function Account() {
         <>
 
 
-            <Flex gap="middle" align="start" vertical>
+            <Flex gap="middle" align="center" vertical>
                 <Card
                     actions={actions}
                     style={{
-                        minWidth: 300,
+                        width: "50%",
                     }}
                 >
                     <Card.Meta
                         avatar={
                             (userData.gender === "Female"
-                                ? <Avatar src="https://api.dicebear.com/9.x/personas/svg?seed=Destiny" />
-                                : <Avatar src="https://api.dicebear.com/9.x/personas/svg?seed=Andrea"/> )}
+                                ? <Avatar src="https://api.dicebear.com/9.x/personas/svg?seed=Destiny" size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}/>
+                                : <Avatar src="https://api.dicebear.com/9.x/personas/svg?seed=Andrea" size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}/>)}
                         title={
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <span>{userData.name}</span>
