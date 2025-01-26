@@ -1,26 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { auth } from "../../firebaseConfig";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const initialState = {
-    users: [],
+    user: JSON.parse(localStorage.getItem("user")) || null,
     loading: false,
     error: "",
 };
 
 const authSlice = createSlice({
-    name: "users",
+    name: "user",
     initialState,
     reducers: {
-        pushUser: (state, action) => {
-            state.users = action.payload;
+        setUser: (state, action) => {
+            state.user = action.payload;
+            localStorage.setItem("user", JSON.stringify(action.payload));
         },
-        createUserInFirebase: (state, action) => {
-            createUserWithEmailAndPassword(auth, state.users.email, )
+        logoutUser: (state, action) => {
+            state.user = null;
+            localStorage.removeItem("user");
+        },
+        setLoading: (state, action) => {
+            state.loading = action.payload;
+        },
+        setError: (state, action) => {
+            state.error = action.payload;
         }
     },
 })
 
-export const { pushUser } = authSlice.actions;
+export const {
+    setUser,
+    logoutUser,
+    setLoading,
+    setError
+} = authSlice.actions;
 
 export default authSlice.reducer;

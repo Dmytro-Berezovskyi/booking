@@ -1,78 +1,70 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import {useSelector} from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { auth } from "../firebaseConfig";
-
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { setUser, setLoading, setError } from "../store/slices/authSlice";
+import * as Yup from "yup";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
-import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
+import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
 
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
-    const users = useSelector((state) => state.users);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
+
+    const [loading, setLoadingState] = useState(false);
+
+    const [successfulLogin, setSuccessfulLogin] = useState(false);
 
     const initialValues = {
         email: "",
         password: "",
     }
 
-    const validate = (values) => {
-        const errors = {};
+    const validationSchema = Yup.object({
+        email: Yup.string().email("Invalid email").required("Required"),
+        password: Yup.string().min(6, "Minimum 6 characters").required("Required"),
+    });
 
-        if (!values.email) {
-            errors.email =
-                <div>
-                    <span>Enter your email address</span>
-                </div>
-        }
-
-        if (!values.password) {
-            errors.password =
-                <div>
-                    <span>Enter your password</span>
-                </div>
-        }
-
-        return errors;
-    }
-    console.log(users);
-    const handleLogin =  async (values, { resetForm }) => {
+    const handleSubmit =  async (values, { resetForm }) => {
+        dispatch(setLoading(true));
+        setLoadingState(true);
         try {
-            await signInWithEmailAndPassword(auth, values.email, values.password);
-            alert("Login successful!");
+            const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password);
+            const user = userCredential.user;
+
+            dispatch(setUser({ email: user.email, uid: user.uid }));
             resetForm();
-            setOpen(false);
-        } catch (err) {
-            alert("Login failed: " + err.message);
-            console.log(err);
+            setSuccessfulLogin(true);
+            setTimeout(() => {
+                setOpen(false);
+                setSuccessfulLogin(false);
+            }, 2000);
+        } catch (error) {
+            dispatch(setError(error.message));
+        } finally {
+            dispatch(setLoading(false));
+            setLoadingState(false);
         }
-        //setSubmitting(false);
     }
 
     const showModal = () => {
-        setOpen(true);
-    };
-    const handleOk = () => {
-        setConfirmLoading(true);
-        setTimeout(() => {
+        if (localStorage.getItem("user")) {
             setOpen(false);
-            setConfirmLoading(false);
-        }, 2000);
-    };
-    const handleCancel = () => {
-        console.log("Clicked cancel button");
-        setOpen(false);
+            navigate("/account");
+        } else {
+            setOpen(true);
+        }
     };
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
-    };
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
+    const handleCancel = () => {
+        setOpen(false);
     };
 
     return (
@@ -82,17 +74,17 @@ export default function ModalLayout() {
             </button>
             <Formik
                 initialValues={initialValues}
-                validate={validate}
-                onSubmit={handleLogin}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
             >
                 {({ setFieldValue, setFieldTouched, isSubmitting, values }) => (
 
                     <Modal
                         open={open}
-                        onOk={handleOk}
                         confirmLoading={confirmLoading}
                         onCancel={handleCancel}
                         footer={null}
+                        loading={loading}
                     >
                         <h1 style={{textAlign: "center"}}>Log In</h1>
                         <div style={{display: "flex", justifyContent: "center", margin: "50px"}}>
@@ -124,6 +116,13 @@ export default function ModalLayout() {
                                 <Button block type="primary" htmlType="submit" loading={isSubmitting}>
                                     Log in
                                 </Button>
+                                {(successfulLogin === true ?
+                                        <div style={{display: "flex", justifyContent: "center", gap: "10px"}}>
+                                            <CheckCircleFilled style={{color: "green", fontSize: "20px"}}/>
+                                            <span>Successful</span>
+                                        </div>
+                                        : null
+                                )}
                                 <span>You don't have on account? <NavLink to="/registration" onClick={handleCancel}>Sign up</NavLink></span>
                             </Form>
                         </div>

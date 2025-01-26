@@ -1,11 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 const firebaseConfig = {
-    apiKey: "API_KEY",
+    apiKey: "AIzaSyBnU34s9jzyZqUv3H6w3vrxX9elmBnGIZM",
     authDomain: "petprojectbooking.firebaseapp.com",
     projectId: "petprojectbooking",
     storageBucket: "petprojectbooking.firebasestorage.app",
@@ -16,3 +17,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
