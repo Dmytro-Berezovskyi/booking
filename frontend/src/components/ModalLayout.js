@@ -1,19 +1,23 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { auth } from "../firebaseConfig";
+import {auth, db} from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { setUser, setLoading, setError } from "../store/slices/authSlice";
 import * as Yup from "yup";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
 import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
+import {doc, getDoc} from "firebase/firestore";
 
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const currentUser = useSelector(state => state.user);
+    const [userData, setUserData] = useState(false);
 
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
@@ -26,6 +30,23 @@ export default function ModalLayout() {
         email: "",
         password: "",
     }
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const docRef = doc(db, "users", currentUser.user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    setUserData(docSnap.data());
+                } else {
+                    console.log("Документ не знайдено!");
+                }
+            } catch (error) {
+                console.error("Помилка отримання даних:", error);
+            }
+        };
+        fetchUserData();
+    }, [currentUser]);
 
     const validationSchema = Yup.object({
         email: Yup.string().email("Invalid email").required("Required"),
@@ -69,7 +90,8 @@ export default function ModalLayout() {
 
     return (
         <>
-            <button style={{background: "none", border: "none", cursor: "pointer"}} onClick={showModal}>
+            {(localStorage.getItem("user") ? <span>Hallo {userData.name}!</span> : null)}
+            <button style={{background: "none", border: "none", cursor: "pointer", marginRight: "30px"}} onClick={showModal}>
                 <UserOutlined style={{color: (themeMode === "dark" ? "#ffffff" : "rgba(0,0,0,0.85)"), fontSize: "20px"}}/>
             </button>
             <Formik
