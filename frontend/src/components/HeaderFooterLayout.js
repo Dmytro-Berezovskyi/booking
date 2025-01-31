@@ -30,7 +30,6 @@ export default function HeaderFooterLayout () {
     const dispatch = useDispatch();
     const location = useLocation();
     const currentPath = location.pathname;
-    console.log(themeMode);
 
     const switchOnChange = (checked) => {
         dispatch(toggleThemeMode());

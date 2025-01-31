@@ -1,15 +1,16 @@
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { db } from "../../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
+
 import { logoutUser } from "../../store/slices/authSlice";
 
 import { Button, Avatar, Card, Flex } from "antd";
 import { EditOutlined, SettingOutlined, EllipsisOutlined } from "@ant-design/icons";
-
 
 const actions = [
     <EditOutlined key="edit" />,
@@ -25,16 +26,14 @@ export default function Account() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            try {
-                const docRef = doc(db, "users", currentUser.user.uid);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    setUserData(docSnap.data());
-                } else {
-                    console.log("Документ не знайдено!");
-                }
-            } catch (error) {
-                console.error("Помилка отримання даних:", error);
+            if (!currentUser || !currentUser.user || !currentUser.user.uid) {
+                return;
+            }
+
+            const docRef = doc(db, "users", currentUser.user.uid);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                setUserData(docSnap.data());
             }
         };
 
@@ -49,8 +48,6 @@ export default function Account() {
 
     return (
         <>
-
-
             <Flex gap="middle" align="center" vertical>
                 <Card
                     actions={actions}
