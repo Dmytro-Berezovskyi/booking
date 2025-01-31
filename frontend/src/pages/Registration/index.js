@@ -1,19 +1,18 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Form, Field, Formik, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
 import { auth } from "../../firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { db } from "../../firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
-import * as Yup from "yup";
 
 import { setUser, setLoading, setError } from "../../store/slices/authSlice";
 
-import ModalLayout from "../../components/ModalLayout";
-
 import { Button, Divider, Input, Radio } from "antd";
 import {UserOutlined, MailOutlined, LockOutlined, CheckCircleFilled} from "@ant-design/icons";
-import { useState } from "react";
 
 const options = [
     {

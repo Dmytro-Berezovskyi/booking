@@ -2,14 +2,16 @@ import {useEffect, useState} from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
 import {auth, db} from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import {doc, getDoc} from "firebase/firestore";
+
 import { setUser, setLoading, setError } from "../store/slices/authSlice";
-import * as Yup from "yup";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
 import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
-import {doc, getDoc} from "firebase/firestore";
 
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
@@ -20,7 +22,6 @@ export default function ModalLayout() {
     const [userData, setUserData] = useState(false);
 
     const [open, setOpen] = useState(false);
-    const [confirmLoading, setConfirmLoading] = useState(false);
 
     const [loading, setLoadingState] = useState(false);
 
@@ -33,16 +34,14 @@ export default function ModalLayout() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            try {
-                const docRef = doc(db, "users", currentUser.user.uid);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    setUserData(docSnap.data());
-                } else {
-                    console.log("Документ не знайдено!");
-                }
-            } catch (error) {
-                console.error("Помилка отримання даних:", error);
+            if (!currentUser || !currentUser.user || !currentUser.user.uid) {
+                return;
+            }
+
+            const docRef = doc(db, "users", currentUser.user.uid);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                setUserData(docSnap.data());
             }
         };
         fetchUserData();
@@ -103,7 +102,6 @@ export default function ModalLayout() {
 
                     <Modal
                         open={open}
-                        confirmLoading={confirmLoading}
                         onCancel={handleCancel}
                         footer={null}
                         loading={loading}
@@ -151,7 +149,6 @@ export default function ModalLayout() {
                     </Modal>
                 )}
             </Formik>
-
         </>
     )
 }
