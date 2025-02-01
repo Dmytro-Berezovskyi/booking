@@ -13,6 +13,8 @@ import { setUser, setLoading, setError } from "../store/slices/authSlice";
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
 import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
 
+import "./style.css";
+
 export default function ModalLayout() {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const dispatch = useDispatch();
@@ -90,9 +92,10 @@ export default function ModalLayout() {
     return (
         <>
             {(localStorage.getItem("user") ? <span>Hallo {userData.name}!</span> : null)}
-            <button style={{background: "none", border: "none", cursor: "pointer", marginRight: "30px"}} onClick={showModal}>
-                <UserOutlined style={{color: (themeMode === "dark" ? "#ffffff" : "rgba(0,0,0,0.85)"), fontSize: "20px"}}/>
-            </button>
+            <Button onClick={showModal} className="custom-button" icon={<UserOutlined className="custom-icon" />}>
+                <span className="custom-text">Account</span>
+            </Button>
+
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}

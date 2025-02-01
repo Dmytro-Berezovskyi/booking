@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
+import { setReserve } from "../../store/slices/reservedHotelsSlice";
 import { fetchOneHotel } from "../../store/thunks/oneHotelThunk";
 
-import { Divider, Rate } from "antd";
+import {Button, Divider, Rate} from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
 export default function OneHotel() {
@@ -13,9 +14,16 @@ export default function OneHotel() {
     const hotel = useSelector(state => state.oneHotel.hotel);
     const dispatch = useDispatch();
 
+    const reservedHotels = useSelector((state) => state.reservedHotels.reservedHotels);
+
     useEffect(() => {
         dispatch(fetchOneHotel({ id }))
     }, [dispatch]);
+
+    const handleReserve = () => {
+        dispatch(setReserve(hotel))
+        localStorage.setItem("reserved_hotels", JSON.stringify(reservedHotels))
+    }
 
     return (
         <>
@@ -41,6 +49,15 @@ export default function OneHotel() {
                             >
                                 {hotel.name}
                                 <Rate disabled value={hotel?.hotel_rating || 0} style={{marginLeft: "15px"}} />
+                                <Button
+                                    type="primary"
+                                    fontWeight="bold"
+                                    size="large"
+                                    style={{marginLeft: "15px"}}
+                                    onClick={handleReserve}
+                                >
+                                    <span style={{fontWeight: "bold"}}>Reserve your hotel room</span>
+                                </Button>
                             </h1>
                         </Divider>
 
@@ -75,7 +92,6 @@ export default function OneHotel() {
                                 </span>
                                 </a>
                             ) : null}
-
                         </div>
 
                         <p style={{

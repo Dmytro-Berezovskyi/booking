@@ -1,0 +1,13 @@
+.custom-icon,
+.custom-text {
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.custom-icon {
+    font-size: 20px;
+}
+
+.custom-button:hover .custom-icon,
+.custom-button:hover .custom-text {
+    color: inherit;
+}
