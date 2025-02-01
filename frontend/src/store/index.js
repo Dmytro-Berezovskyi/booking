@@ -6,6 +6,7 @@ import hotelsReducer from "./slices/hotelsSlice";
 import selectedHotelsSlice from "./slices/selectedHotelsSlice";
 import oneHotelSlice from "./slices/oneHotelSlice";
 import authReducer from "./slices/authSlice";
+import reservedHotelsReducer from "./slices/reservedHotelsSlice";
 
 export const store = configureStore({
     reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
         hotels: hotelsReducer,
         selectedHotels: selectedHotelsSlice,
         oneHotel: oneHotelSlice,
-        user: authReducer
+        user: authReducer,
+        reservedHotels: reservedHotelsReducer,
     }
 })

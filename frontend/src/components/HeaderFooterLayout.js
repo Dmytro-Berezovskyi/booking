@@ -1,12 +1,14 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import {NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { toggleThemeMode } from "../store/slices/themeSlice";
 
 import ModalLayout from "./ModalLayout";
 
-import { ConfigProvider, Layout, Menu, theme, Switch } from "antd";
-import { SunOutlined, MoonOutlined } from "@ant-design/icons";
+import {ConfigProvider, Layout, Menu, theme, Switch, Button, Flex} from "antd";
+import { SunOutlined, MoonOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+
+import "./style.css";
 
 const { Header, Content, Footer } = Layout;
 
@@ -29,6 +31,7 @@ export default function HeaderFooterLayout () {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const dispatch = useDispatch();
     const location = useLocation();
+    const navigate = useNavigate();
     const currentPath = location.pathname;
 
     const switchOnChange = (checked) => {
@@ -99,11 +102,21 @@ export default function HeaderFooterLayout () {
                         style={{flex: 1, minWidth: 0}}
                         theme={themeMode}
                     />
-                    <ModalLayout />
+                    <Flex gap="20px" align="center" style={{marginRight: "20px"}}>
+                        <ModalLayout/>
+
+                        <Button
+                            className="custom-button"
+                            icon={<ShoppingCartOutlined className="custom-icon"/>}
+                            onClick={() => {navigate("/cart")}}
+                        >
+                            <span className="custom-text">Cart</span>
+                        </Button>
+                    </Flex>
 
                     <Switch
-                        checkedChildren={<MoonOutlined />}
-                        unCheckedChildren={<SunOutlined />}
+                        checkedChildren={<MoonOutlined/>}
+                        unCheckedChildren={<SunOutlined/>}
                         onChange={switchOnChange}
                     />
 
@@ -126,5 +139,3 @@ export default function HeaderFooterLayout () {
         </ConfigProvider>
     )
 }
-
-//rgb(177,197,238)
