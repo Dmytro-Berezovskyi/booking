@@ -12,9 +12,8 @@ export default function OneHotel() {
     const { id } = useParams();
     const themeMode = useSelector((state) => state.theme.themeMode);
     const hotel = useSelector(state => state.oneHotel.hotel);
-    const dispatch = useDispatch();
-
     const reservedHotels = useSelector((state) => state.reservedHotels.reservedHotels);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchOneHotel({ id }))
@@ -22,7 +21,6 @@ export default function OneHotel() {
 
     const handleReserve = () => {
         dispatch(setReserve(hotel))
-        localStorage.setItem("reserved_hotels", JSON.stringify(reservedHotels))
     }
 
     return (

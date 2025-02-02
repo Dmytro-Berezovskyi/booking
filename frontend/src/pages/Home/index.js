@@ -61,6 +61,7 @@ export default function Home() {
             dispatch(fetchSelectedHotels(selectedCity.label));
             setSubmitted(true);
         }
+        localStorage.setItem("details", JSON.stringify(values));
 
         resetForm();
     };
