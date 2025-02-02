@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    reservedHotels: [],
+    reservedHotels:  Array.isArray(JSON.parse(localStorage.getItem("reserved_hotels")))
+        ? JSON.parse(localStorage.getItem("reserved_hotels"))
+        : [],
+    details: [],
     loading: false,
     error: "",
 };
@@ -12,9 +15,11 @@ const reservedHotelsSlice = createSlice({
     reducers: {
         setReserve: (state, action) => {
             state.reservedHotels.push(action.payload);
+            localStorage.setItem("reserved_hotels", JSON.stringify(state.reservedHotels));
         },
         removeReserve: (state, action) => {
-            state.reservedHotels.filter(hotel => hotel.id !== action.payload);
+            state.reservedHotels = state.reservedHotels.filter(hotel => hotel.id !== action.payload);
+            localStorage.setItem("reserved_hotels", JSON.stringify(state.reservedHotels));
         },
         setLoading: (state, action) => {
             state.loading = action.payload;
@@ -25,6 +30,6 @@ const reservedHotelsSlice = createSlice({
     },
 })
 
-export const { setReserve } = reservedHotelsSlice.actions;
+export const { setReserve, removeReserve } = reservedHotelsSlice.actions;
 
 export default reservedHotelsSlice.reducer;
