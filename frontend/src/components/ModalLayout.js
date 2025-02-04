@@ -91,7 +91,7 @@ export default function ModalLayout() {
 
     return (
         <>
-            {(localStorage.getItem("user") ? <span>Hallo {userData.name}!</span> : null)}
+            {(localStorage.getItem("user") ? <span>Hello {userData.name}!</span> : null)}
             <Button onClick={showModal} className="custom-button" icon={<UserOutlined className="custom-icon" />}>
                 <span className="custom-text">Account</span>
             </Button>

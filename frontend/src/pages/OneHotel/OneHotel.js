@@ -54,7 +54,7 @@ export default function OneHotel() {
                                     style={{marginLeft: "15px"}}
                                     onClick={handleReserve}
                                 >
-                                    <span style={{fontWeight: "bold"}}>Reserve your hotel room</span>
+                                    <span style={{fontWeight: "bold"}}>Reserve</span>
                                 </Button>
                             </h1>
                         </Divider>
