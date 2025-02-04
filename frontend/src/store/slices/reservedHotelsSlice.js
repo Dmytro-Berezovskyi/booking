@@ -14,12 +14,21 @@ const reservedHotelsSlice = createSlice({
     initialState,
     reducers: {
         setReserve: (state, action) => {
-            state.reservedHotels.push(action.payload);
+            const existingHotel = state.reservedHotels.find((hotel) => hotel.id === action.payload.id);
+            if (existingHotel) {
+                existingHotel.quantity += 1;
+            } else {
+                state.reservedHotels.push({...action.payload, quantity: 1});
+            }
+
             localStorage.setItem("reserved_hotels", JSON.stringify(state.reservedHotels));
         },
         removeReserve: (state, action) => {
             state.reservedHotels = state.reservedHotels.filter(hotel => hotel.id !== action.payload);
             localStorage.setItem("reserved_hotels", JSON.stringify(state.reservedHotels));
+        },
+        changeQuantity: (state, action) => {
+
         },
         setLoading: (state, action) => {
             state.loading = action.payload;
