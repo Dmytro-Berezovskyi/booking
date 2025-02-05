@@ -1,0 +1,26 @@
+.cardType-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    color: rgba(117, 117, 117, 0.5);
+    transition: color 0.8s ease, width 0.3s ease, height 0.3s ease, fill 0.8s ease;
+}
+
+.cardType-btn:hover {
+    color: white;
+}
+
+.cardType-btn:hover .icon-mc-one {
+    fill: white;
+    fill-opacity: 0.9;
+}
+.cardType-btn:hover .icon-mc-two {
+    fill: white;
+    fill-opacity: 1;
+}
+
+.cardType-btn:active svg {
+    width: 36px;
+    height: 36px;
+}
