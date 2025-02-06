@@ -1,6 +1,6 @@
 import { Form, Field, ErrorMessage, Formik } from "formik";
 
-import {Flex, Input} from "antd";
+import {Button, Flex, Input} from "antd";
 
 import "./style.css";
 import {LockOutlined} from "@ant-design/icons";
@@ -10,6 +10,9 @@ export default function CardInput() {
         cardType: "",
         cardNumber: "",
         expiryDate: "",
+        expiryYear: "",
+        expiryMonth: "",
+        expiryDay: "",
         cvv: ""
     }
 
@@ -34,9 +37,9 @@ export default function CardInput() {
         onSubmit={handleSubmit}
         >
             {({ setFieldValue, setFieldTouched, isSubmitting, values }) => (
-                <Form>
+                <Form style={{display: "flex", flexDirection: "column", gap: "30px", maxWidth: "50%"}}>
                     <Flex vertical gap="10px">
-                        <span>Select Card Type</span>
+                        <span style={{fontWeight: "600"}}>Select Card Type</span>
 
                         <Flex gap="20px">
                             <button
@@ -79,25 +82,6 @@ export default function CardInput() {
                                 </svg>
                             </button>
 
-                            <button className={`cardType-btn ${values.cardType === "payPal" ? "active" : ""}`}
-                                    onClick={() => setFieldValue("cardType", "payPal")}
-                                    type="button"
-                            >
-                                <svg
-                                    width="45" height="45" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M9.93 12.99C10.03 12.99 12.35 13.09 13.73 12.75H13.74C15.33 12.36 17.54 11.24 18.11 7.58C18.11 7.58 19.38 3 13.08 3H7.67C7.18 3 6.76 3.36 6.68 3.84L4.38 18.4C4.33 18.7 4.57 18.98 4.87 18.98H8.3L9.14 13.66C9.2 13.28 9.53 12.99 9.93 12.99Z"
-                                        fill={values.cardType === "payPal" ? "#ffffff" : "currentColor"}
-                                        fillOpacity="currentOpacity"/>
-                                    <path
-                                        d="M18.99 8.29C18.18 12.02 15.63 13.99 11.57 13.99H10.1L9.07 20.51C9.03 20.77 9.23 21 9.49 21H11.39C11.73 21 12.03 20.75 12.08 20.41C12.16 20.01 12.6 17.09 12.69 16.59C12.74 16.25 13.04 16 13.38 16H13.82C16.64 16 18.85 14.85 19.5 11.54C19.76 10.2 19.62 9.1 18.99 8.29Z"
-                                        fill={values.cardType === "payPal" ? "#ffffff" : "currentColor"}
-                                        fillOpacity="currentOpacity"/>
-                                </svg>
-                            </button>
-
                             <button className={`cardType-btn ${values.cardType === "applePay" ? "active" : ""}`}
                                     onClick={() => setFieldValue("cardType", "applePay")}
                                     type="button"
@@ -120,14 +104,14 @@ export default function CardInput() {
                         </Flex>
                     </Flex>
 
-                    <Flex vertical>
-                        <label htmlFor="cardNumber">Card Number</label>
+                    <Flex vertical gap="5px">
+                        <label htmlFor="cardNumber" style={{fontWeight: "600"}}>Card Number</label>
 
                         <Field name="cardNumber">
                             {({ field }) => (
                                 <Input
                                     {...field}
-                                    className="cardNumber-input"
+                                    className="cardDetails-input"
                                     variant="borderless"
                                     value={values.cardNumber}
                                     onPressEnter={(value) => setFieldTouched("cardNumber", `${value}`)}
@@ -136,8 +120,69 @@ export default function CardInput() {
                         </Field>
                     </Flex>
 
+                    <Flex gap="20px" justify="space-between">
+                        <Flex vertical gap="5px" style={{width: "50%"}}>
+                            <label htmlFor="expiryDate" style={{fontWeight: "600"}}>Expiry Date</label>
 
+                            <Flex gap="5px" alignItems="baseline">
+                                <Field name="expiryYear">
+                                    {({field}) => (
+                                        <Input
+                                            {...field}
+                                            className="cardDetails-input"
+                                            variant="borderless"
+                                            value={values.expiryYear}
+                                            onPressEnter={(value) => setFieldTouched("expiryYear", `${value}`)}
+                                        />
+                                    )}
+                                </Field>
+                                <span>/</span>
+                                <Field name="expiryMonth">
+                                    {({field}) => (
+                                        <Input
+                                            {...field}
+                                            className="cardDetails-input"
+                                            variant="borderless"
+                                            value={values.expiryMonth}
+                                            onPressEnter={(value) => setFieldTouched("expiryMonth", `${value}`)}
+                                        />
+                                    )}
+                                </Field>
+                                <span>/</span>
+                                <Field name="expiryDay">
+                                    {({field}) => (
+                                        <Input
+                                            {...field}
+                                            className="cardDetails-input"
+                                            variant="borderless"
+                                            value={values.expiryDay}
+                                            onPressEnter={(value) => setFieldTouched("expiryDay", `${value}`)}
+                                        />
+                                    )}
+                                </Field>
+                            </Flex>
+                        </Flex>
+
+                        <Flex vertical gap="5px" style={{width: "15%"}}>
+                            <label htmlFor="cvv" style={{fontWeight: "600", textTransform: "uppercase"}}>Cvv</label>
+
+                            <Field name="cvv">
+                                {({field}) => (
+                                    <Input
+                                        {...field}
+                                        className="cardDetails-input"
+                                        variant="borderless"
+                                        value={values.cvv}
+                                        onPressEnter={(value) => setFieldTouched("cvv", `${value}`)}
+                                    />
+                                )}
+                            </Field>
+                        </Flex>
+                    </Flex>
+
+                    <Button type="primary" style={{borderRadius: "0", width: ""}} htmlType="submit">Pay</Button>
                 </Form>
+
             )}
         </Formik>
     )
