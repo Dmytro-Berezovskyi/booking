@@ -15,8 +15,8 @@ export default function CartItem () {
     const dispatch = useDispatch();
 
     const initialValues = {
-        checkIn: dayjs().format(details.checkIn),
-        checkOut: dayjs().format(details.checkOut),
+        checkIn: details.checkIn,
+        checkOut: details.checkOut,
         adults: details.adults,
         children: details.children,
     }

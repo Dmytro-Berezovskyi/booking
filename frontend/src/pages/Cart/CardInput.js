@@ -1,9 +1,9 @@
 import { Form, Field, ErrorMessage, Formik } from "formik";
+import * as Yup from "yup";
 
 import {Button, Flex, Input} from "antd";
 
 import "./style.css";
-import {LockOutlined} from "@ant-design/icons";
 
 export default function CardInput() {
     const initialValues = {
@@ -12,13 +12,22 @@ export default function CardInput() {
         expiryDate: "",
         expiryYear: "",
         expiryMonth: "",
-        expiryDay: "",
         cvv: ""
     }
 
-    const validate = () => {
-
-    }
+    const validationSchema = Yup.object().shape({
+        cardNumber: Yup.string()
+            .required("Card Number is required")
+            .length(16, "The card number must be 16 digits long"),
+        expiryMonth: Yup.string()
+            .required("Expiry Month is required"),
+        expiryYear: Yup.string()
+            .required("Expiry Year is required")
+            .matches(/^(0[1-9]|1[0-2])$/, "The expiry year must be 2 digits long"),
+        cvv: Yup.string()
+            .required("CVV is required")
+            .matches(/^\d{3}$/, "The cvv must be 3 digits long"),
+    });
 
     const handleSubmit = (values, { resetForm }) => {
         console.log(values);
@@ -26,14 +35,10 @@ export default function CardInput() {
         resetForm();
     }
 
-    const handleOnClick = () => {
-
-    }
-
     return (
         <Formik
         initialValues={initialValues}
-        validate={validate}
+        validationSchema={validationSchema}
         onSubmit={handleSubmit}
         >
             {({ setFieldValue, setFieldTouched, isSubmitting, values }) => (
@@ -46,6 +51,7 @@ export default function CardInput() {
                                 className={`cardType-btn ${values.cardType === "masterCard" ? "active" : ""}`}
                                 onClick={() => setFieldValue("cardType", "masterCard")}
                                 type="button"
+                                aria-label="Select Master Card"
                             >
                                 <svg
                                     width="45" height="45" viewBox="0 0 24 24" fill="none"
@@ -70,6 +76,7 @@ export default function CardInput() {
                                 className={`cardType-btn ${values.cardType === "visa" ? "active" : ""}`}
                                 onClick={() => setFieldValue("cardType", "visa")}
                                 type="button"
+                                aria-label="Select Visa"
                             >
                                 <svg
                                     width="45" height="45" viewBox="0 0 24 24" fill="none"
@@ -85,6 +92,7 @@ export default function CardInput() {
                             <button className={`cardType-btn ${values.cardType === "applePay" ? "active" : ""}`}
                                     onClick={() => setFieldValue("cardType", "applePay")}
                                     type="button"
+                                    aria-label="ApplePay"
                             >
                                 <svg width="45" height="45" viewBox="0 0 30 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -113,11 +121,17 @@ export default function CardInput() {
                                     {...field}
                                     className="cardDetails-input"
                                     variant="borderless"
-                                    value={values.cardNumber}
-                                    onPressEnter={(value) => setFieldTouched("cardNumber", `${value}`)}
+                                    value={values.cardNumber.replace(/\s?/g, '').replace(/(\d{4})/g, '$1 ').trim()}
+                                    placeholder="1111 1111 1111 1111"
+                                    maxLength={19}
+                                    onChange={(e) => {
+                                        const rawValue = e.target.value.replace(/\D/g, '');
+                                        setFieldValue("cardNumber", rawValue.slice(0, 16));
+                                    }}
                                 />
                             )}
                         </Field>
+                        <ErrorMessage name="cardNumber"/>
                     </Flex>
 
                     <Flex gap="20px" justify="space-between">
@@ -125,18 +139,6 @@ export default function CardInput() {
                             <label htmlFor="expiryDate" style={{fontWeight: "600"}}>Expiry Date</label>
 
                             <Flex gap="5px" alignItems="baseline">
-                                <Field name="expiryYear">
-                                    {({field}) => (
-                                        <Input
-                                            {...field}
-                                            className="cardDetails-input"
-                                            variant="borderless"
-                                            value={values.expiryYear}
-                                            onPressEnter={(value) => setFieldTouched("expiryYear", `${value}`)}
-                                        />
-                                    )}
-                                </Field>
-                                <span>/</span>
                                 <Field name="expiryMonth">
                                     {({field}) => (
                                         <Input
@@ -144,26 +146,39 @@ export default function CardInput() {
                                             className="cardDetails-input"
                                             variant="borderless"
                                             value={values.expiryMonth}
-                                            onPressEnter={(value) => setFieldTouched("expiryMonth", `${value}`)}
+                                            maxLength={2}
+                                            placeholder="05"
+                                            onChange={(e) => {
+                                                let value = e.target.value.replace(/\D/g, "").slice(0, 2);
+                                                if (value === "0") value = "";
+                                                else if (value.length === 1) value = `0${value}`;
+                                                setFieldValue("expiryMonth", value);
+                                            }}
                                         />
                                     )}
                                 </Field>
                                 <span>/</span>
-                                <Field name="expiryDay">
+                                <Field name="expiryYear">
                                     {({field}) => (
                                         <Input
                                             {...field}
                                             className="cardDetails-input"
                                             variant="borderless"
-                                            value={values.expiryDay}
-                                            onPressEnter={(value) => setFieldTouched("expiryDay", `${value}`)}
+                                            value={values.expiryYear}
+                                            maxLength={2}
+                                            placeholder="29"
+                                            onChange={(e) => setFieldValue("expiryYear", e.target.value.replace(/\D/g, ""))}
                                         />
                                     )}
                                 </Field>
                             </Flex>
+                            <Flex vertical gap="2px">
+                                <span><ErrorMessage name="expiryMonth"/></span>
+                                <span><ErrorMessage name="expiryYear"/></span>
+                            </Flex>
                         </Flex>
 
-                        <Flex vertical gap="5px" style={{width: "15%"}}>
+                        <Flex vertical gap="5px" style={{width: "25%"}}>
                             <label htmlFor="cvv" style={{fontWeight: "600", textTransform: "uppercase"}}>Cvv</label>
 
                             <Field name="cvv">
@@ -172,15 +187,17 @@ export default function CardInput() {
                                         {...field}
                                         className="cardDetails-input"
                                         variant="borderless"
-                                        value={values.cvv}
-                                        onPressEnter={(value) => setFieldTouched("cvv", `${value}`)}
+                                        value={values.cvv.replace(/\D/g, '')}
+                                        maxLength={3}
+                                        placeholder="123"
                                     />
                                 )}
                             </Field>
+                            <ErrorMessage name="cvv"/>
                         </Flex>
                     </Flex>
 
-                    <Button type="primary" style={{borderRadius: "0", width: ""}} htmlType="submit">Pay</Button>
+                    <Button type="primary" htmlType="submit">Pay</Button>
                 </Form>
 
             )}
