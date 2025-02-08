@@ -11,14 +11,14 @@ export default function Cart() {
     return (
         <>
             <Row>
-                <Col flex={3} style={{background: "#ECEDEF", padding: "30px", minHeight: "500px"}}>
+                <Col flex="60%" style={{background: "#ECEDEF", padding: "30px", minHeight: "500px"}}>
                     <h1>Shopping cart</h1>
                     <Divider />
 
                     <CartItem/>
                 </Col>
 
-                <Col flex={2} style={{background: "#373B4D", color: "#fff", padding: "30px"}}>
+                <Col flex="40%" style={{background: "#373B4D", color: "#fff", padding: "30px"}}>
                     <h1>Card Details</h1>
                     <Divider style={{borderColor: "rgba(255,255,255,0.20)"}}/>
 

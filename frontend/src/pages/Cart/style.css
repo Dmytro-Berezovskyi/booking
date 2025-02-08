@@ -28,3 +28,7 @@
     border-bottom: 1.5px solid white;
     border-radius: 0;
 }
+
+.cardDetails-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
