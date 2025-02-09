@@ -18,14 +18,13 @@ export default function Cart() {
                     <CartItem/>
                 </Col>
 
-                <Col flex="40%" style={{background: "#373B4D", color: "#fff", padding: "30px"}}>
+                <Col flex="40%" style={{background: "#373B4D", color: "#fff", padding: "30px"}} className="hover-animate">
                     <h1>Card Details</h1>
                     <Divider style={{borderColor: "rgba(255,255,255,0.20)"}}/>
 
                     <CardInput />
                 </Col>
             </Row>
-
         </>
     )
 }

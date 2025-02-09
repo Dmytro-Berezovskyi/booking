@@ -32,3 +32,8 @@
 .cardDetails-input::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
+
+.error-msg {
+    color: #FF0000;
+    line-height: 1.5;
+}

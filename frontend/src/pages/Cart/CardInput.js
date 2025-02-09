@@ -131,7 +131,7 @@ export default function CardInput() {
                                 />
                             )}
                         </Field>
-                        <ErrorMessage name="cardNumber"/>
+                        <ErrorMessage name="cardNumber" component="div" className="error-msg" />
                     </Flex>
 
                     <Flex gap="20px" justify="space-between">
@@ -173,8 +173,8 @@ export default function CardInput() {
                                 </Field>
                             </Flex>
                             <Flex vertical gap="2px">
-                                <span><ErrorMessage name="expiryMonth"/></span>
-                                <span><ErrorMessage name="expiryYear"/></span>
+                                <ErrorMessage name="expiryMonth" component="div" className="error-msg" />
+                                <ErrorMessage name="expiryYear" component="div" className="error-msg"/>
                             </Flex>
                         </Flex>
 
@@ -193,7 +193,7 @@ export default function CardInput() {
                                     />
                                 )}
                             </Field>
-                            <ErrorMessage name="cvv"/>
+                            <ErrorMessage name="cvv" component="div" className="error-msg" />
                         </Flex>
                     </Flex>
 
