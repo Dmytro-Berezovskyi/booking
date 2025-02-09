@@ -23,7 +23,7 @@ export default function CardInput() {
             .required("Expiry Month is required"),
         expiryYear: Yup.string()
             .required("Expiry Year is required")
-            .matches(/^(0[1-9]|1[0-2])$/, "The expiry year must be 2 digits long"),
+            .matches(/^\d{2}$/, "The expiry year must be 2 digits long"),
         cvv: Yup.string()
             .required("CVV is required")
             .matches(/^\d{3}$/, "The cvv must be 3 digits long"),
