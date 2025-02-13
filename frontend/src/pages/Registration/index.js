@@ -9,7 +9,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { db } from "../../firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
 
-import { setUser, setLoading, setError } from "../../store/slices/authSlice";
+import { logIn, setLoading, setError } from "../../store/slices/authSlice";
 
 import { Button, Divider, Input, Radio } from "antd";
 import {UserOutlined, MailOutlined, LockOutlined, CheckCircleFilled} from "@ant-design/icons";
@@ -52,7 +52,7 @@ export default function Registration() {
                 email: values.email,
             });
 
-            dispatch(setUser({ email: user.email, uid: user.uid, name: values.name, gender: values.gender }));
+            dispatch(logIn({ email: user.email, uid: user.uid, name: values.name, gender: values.gender }));
             resetForm();
             setSuccessfulRegister(true)
             setTimeout(() => {

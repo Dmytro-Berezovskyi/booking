@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import {auth, db} from "../firebaseConfig";
+import {auth, db} from "../../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {doc, getDoc} from "firebase/firestore";
+import { doc, getDoc, setDoc, serverTimestamp} from "firebase/firestore";
 
-import { setUser, setLoading, setError } from "../store/slices/authSlice";
+import { logIn, setLoading, setError, openModal } from "../../store/slices/authSlice";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
 import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
@@ -20,10 +20,11 @@ export default function ModalLayout() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const currentUser = useSelector(state => state.user);
+    const currentUser = useSelector(state => state.user?.user);
+    const open = useSelector(state => state.user.openModal);
     const [userData, setUserData] = useState(false);
 
-    const [open, setOpen] = useState(false);
+    //const [open, setOpen] = useState(false);
 
     const [loading, setLoadingState] = useState(false);
 
@@ -61,11 +62,21 @@ export default function ModalLayout() {
             const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password);
             const user = userCredential.user;
 
-            dispatch(setUser({ email: user.email, uid: user.uid }));
+            const userRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userRef);
+
+            if (!userSnap.exists()) {
+                await setDoc(userRef, {
+                    email: user.email,
+                    createdAt: serverTimestamp()
+                });
+            }
+
+            dispatch(logIn({ email: user.email, uid: user.uid }));
             resetForm();
             setSuccessfulLogin(true);
             setTimeout(() => {
-                setOpen(false);
+                dispatch(openModal());
                 setSuccessfulLogin(false);
             }, 2000);
         } catch (error) {
@@ -78,15 +89,14 @@ export default function ModalLayout() {
 
     const showModal = () => {
         if (localStorage.getItem("user")) {
-            setOpen(false);
             navigate("/account");
         } else {
-            setOpen(true);
+            dispatch(openModal());
         }
     };
 
     const handleCancel = () => {
-        setOpen(false);
+        dispatch(openModal());
     };
 
     return (

@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { hotelsLoader } from "./loaders/hotelsLoader";
 import { destinationLoader } from "./loaders/hotelsLoader";
 
-import HeaderFooterLayout from "./components/HeaderFooterLayout";
+import PrivateRoute from "./components/PrivateRoute";
+
+import HeaderFooterLayout from "./components/Layout/HeaderFooterLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Hotels from "./pages/Hotels";
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/account",
-            element: <Account />,
+            element: <PrivateRoute><Account /></PrivateRoute>,
         },
         {
             path: "/cart",

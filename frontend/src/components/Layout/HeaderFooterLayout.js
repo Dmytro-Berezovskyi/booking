@@ -1,7 +1,7 @@
 import {NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { toggleThemeMode } from "../store/slices/themeSlice";
+import { toggleThemeMode } from "../../store/slices/themeSlice";
 
 import ModalLayout from "./ModalLayout";
 

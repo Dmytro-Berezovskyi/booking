@@ -4,18 +4,18 @@ const initialState = {
     user: JSON.parse(localStorage.getItem("user")) || null,
     loading: false,
     error: "",
+    openModal: false,
 };
 
 const authSlice = createSlice({
     name: "user",
     initialState,
     reducers: {
-        setUser: (state, action) => {
+        logIn: (state, action) => {
             state.user = action.payload;
             localStorage.setItem("user", JSON.stringify(action.payload));
         },
         logoutUser: (state, action) => {
-            state.user = null;
             localStorage.removeItem("user");
         },
         setLoading: (state, action) => {
@@ -23,15 +23,19 @@ const authSlice = createSlice({
         },
         setError: (state, action) => {
             state.error = action.payload;
+        },
+        openModal: (state, action) => {
+            state.openModal = state.openModal === false;
         }
     },
 })
 
 export const {
-    setUser,
+    logIn,
     logoutUser,
     setLoading,
-    setError
+    setError,
+    openModal,
 } = authSlice.actions;
 
 export default authSlice.reducer;
