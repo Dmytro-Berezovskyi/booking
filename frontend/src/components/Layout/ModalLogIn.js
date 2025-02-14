@@ -1,30 +1,27 @@
 import {useEffect, useState} from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import {auth, db} from "../../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { doc, getDoc, setDoc, serverTimestamp} from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 
 import { logIn, setLoading, setError, openModal } from "../../store/slices/authSlice";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
-import { LockOutlined, MailOutlined, UserOutlined, CheckCircleFilled } from "@ant-design/icons";
+import { LockOutlined, MailOutlined, CheckCircleFilled } from "@ant-design/icons";
 
 import "./style.css";
 
-export default function ModalLayout() {
+export default function ModalLogIn() {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
-    const currentUser = useSelector(state => state.user?.user);
+    const currentUser = useSelector(state => state.user);
     const open = useSelector(state => state.user.openModal);
     const [userData, setUserData] = useState(false);
-
-    //const [open, setOpen] = useState(false);
 
     const [loading, setLoadingState] = useState(false);
 
@@ -43,9 +40,11 @@ export default function ModalLayout() {
 
             const docRef = doc(db, "users", currentUser.user.uid);
             const docSnap = await getDoc(docRef);
+            
             if (docSnap.exists()) {
                 setUserData(docSnap.data());
             }
+
         };
         fetchUserData();
     }, [currentUser]);
@@ -62,21 +61,11 @@ export default function ModalLayout() {
             const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password);
             const user = userCredential.user;
 
-            const userRef = doc(db, "users", user.uid);
-            const userSnap = await getDoc(userRef);
-
-            if (!userSnap.exists()) {
-                await setDoc(userRef, {
-                    email: user.email,
-                    createdAt: serverTimestamp()
-                });
-            }
-
             dispatch(logIn({ email: user.email, uid: user.uid }));
             resetForm();
             setSuccessfulLogin(true);
             setTimeout(() => {
-                dispatch(openModal());
+                dispatch(openModal(false));
                 setSuccessfulLogin(false);
             }, 2000);
         } catch (error) {
@@ -87,24 +76,13 @@ export default function ModalLayout() {
         }
     }
 
-    const showModal = () => {
-        if (localStorage.getItem("user")) {
-            navigate("/account");
-        } else {
-            dispatch(openModal());
-        }
-    };
-
     const handleCancel = () => {
-        dispatch(openModal());
+        dispatch(openModal(false));
     };
 
     return (
         <>
             {(localStorage.getItem("user") ? <span>Hello {userData.name}!</span> : null)}
-            <Button onClick={showModal} className="custom-button" icon={<UserOutlined className="custom-icon" />}>
-                <span className="custom-text">Account</span>
-            </Button>
 
             <Formik
                 initialValues={initialValues}

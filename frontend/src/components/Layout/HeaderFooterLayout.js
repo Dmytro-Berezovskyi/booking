@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { toggleThemeMode } from "../../store/slices/themeSlice";
 
-import ModalLayout from "./ModalLayout";
+import ButtonModal from "./ButtonModal";
+import ModalLogIn from "./ModalLogIn";
 
 import {ConfigProvider, Layout, Menu, theme, Switch, Button, Flex} from "antd";
 import { SunOutlined, MoonOutlined, ShoppingCartOutlined } from "@ant-design/icons";
@@ -103,7 +104,8 @@ export default function HeaderFooterLayout () {
                         theme={themeMode}
                     />
                     <Flex gap="20px" align="center" style={{marginRight: "20px"}}>
-                        <ModalLayout/>
+                        <ButtonModal/>
+                        <ModalLogIn/>
 
                         <Button
                             className="custom-button"

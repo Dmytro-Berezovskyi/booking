@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebaseConfig";
 import { db } from "../../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 
@@ -41,7 +39,6 @@ export default function Account() {
     }, [currentUser]);
 
     const handleLogout = async () => {
-        await signOut(auth);
         dispatch(logoutUser());
         navigate("/")
     };

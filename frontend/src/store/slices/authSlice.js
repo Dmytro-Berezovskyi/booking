@@ -25,7 +25,7 @@ const authSlice = createSlice({
             state.error = action.payload;
         },
         openModal: (state, action) => {
-            state.openModal = state.openModal === false;
+            state.openModal = action.payload;
         }
     },
 })
