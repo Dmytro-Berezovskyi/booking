@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     user: JSON.parse(localStorage.getItem("user")) || null,
+    userData: JSON.parse(localStorage.getItem("userData")) || null,
     loading: false,
     error: "",
     openModal: false,
@@ -26,6 +27,9 @@ const authSlice = createSlice({
         },
         openModal: (state, action) => {
             state.openModal = action.payload;
+        },
+        saveUserData: (state, action) => {
+            state.userData = action.payload;
         }
     },
 })
@@ -36,6 +40,7 @@ export const {
     setLoading,
     setError,
     openModal,
+    saveUserData,
 } = authSlice.actions;
 
 export default authSlice.reducer;

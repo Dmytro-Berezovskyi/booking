@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 import { openModal } from "../../store/slices/authSlice";
 
-import {UserOutlined} from "@ant-design/icons";
-import {Button} from "antd";
+import { UserOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 
 
 export default function ButtonModal() {
-    const open = useSelector(state => state.user.openModal);
-    console.log(open)
+    const userData = useSelector((state) => state.user.userData);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -23,6 +22,7 @@ export default function ButtonModal() {
 
     return (
         <>
+            {(localStorage.getItem("user") ? <span>Hello {userData.name}!</span> : null)}
             <Button onClick={showModal} className="custom-button" icon={<UserOutlined className="custom-icon" />}>
                 <span className="custom-text">Account</span>
             </Button>

@@ -8,7 +8,7 @@ import {auth, db} from "../../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc} from "firebase/firestore";
 
-import { logIn, setLoading, setError, openModal } from "../../store/slices/authSlice";
+import { logIn, setLoading, setError, openModal, saveUserData } from "../../store/slices/authSlice";
 
 import { Modal, Button, Checkbox, Input, Flex } from "antd";
 import { LockOutlined, MailOutlined, CheckCircleFilled } from "@ant-design/icons";
@@ -19,9 +19,8 @@ export default function ModalLogIn() {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const dispatch = useDispatch();
 
-    const currentUser = useSelector(state => state.user);
+    const currentUser = useSelector(state => state.user.user);
     const open = useSelector(state => state.user.openModal);
-    const [userData, setUserData] = useState(false);
 
     const [loading, setLoadingState] = useState(false);
 
@@ -34,20 +33,22 @@ export default function ModalLogIn() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            if (!currentUser || !currentUser.user || !currentUser.user.uid) {
+            if (!currentUser?.uid) {
                 return;
             }
 
-            const docRef = doc(db, "users", currentUser.user.uid);
+            const docRef = doc(db, "users", currentUser.uid);
             const docSnap = await getDoc(docRef);
-            
+
             if (docSnap.exists()) {
-                setUserData(docSnap.data());
+                dispatch(saveUserData(docSnap.data()));
+                localStorage.setItem("userData", JSON.stringify(docSnap.data()));
             }
 
         };
         fetchUserData();
-    }, [currentUser]);
+    }, [currentUser, dispatch]);
+
 
     const validationSchema = Yup.object({
         email: Yup.string().email("Invalid email").required("Required"),
@@ -82,8 +83,6 @@ export default function ModalLogIn() {
 
     return (
         <>
-            {(localStorage.getItem("user") ? <span>Hello {userData.name}!</span> : null)}
-
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}

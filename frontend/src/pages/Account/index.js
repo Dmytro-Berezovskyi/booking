@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
-import { db } from "../../firebaseConfig";
-import { doc, getDoc } from "firebase/firestore";
 
 import { logoutUser } from "../../store/slices/authSlice";
 
@@ -17,26 +13,9 @@ const actions = [
 ];
 
 export default function Account() {
-    const currentUser = useSelector(state => state.user);
     const dispatch = useDispatch();
-    const [userData, setUserData] = useState(false);
+    const userData = useSelector(state => state.user.userData);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            if (!currentUser || !currentUser.user || !currentUser.user.uid) {
-                return;
-            }
-
-            const docRef = doc(db, "users", currentUser.user.uid);
-            const docSnap = await getDoc(docRef);
-            if (docSnap.exists()) {
-                setUserData(docSnap.data());
-            }
-        };
-
-        fetchUserData();
-    }, [currentUser]);
 
     const handleLogout = async () => {
         dispatch(logoutUser());
