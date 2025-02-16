@@ -13,6 +13,7 @@ import OneHotel from "./pages/OneHotel/OneHotel";
 import Registration from "./pages/Registration";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
+import ErrorNotFound from "./pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
         },
         {
             path: "*",
-            element: <div>404 Not Found</div>,
+            element: <ErrorNotFound />,
         }
     ]
   }

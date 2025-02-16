@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 import CartItem from "./CartItem";
 import CardInput from "./CardInput";
 
-import {Col, Divider, Row, Flex, Button} from "antd";
-import {useState} from "react";
+import { Col, Divider, Row } from "antd";
 
 export default function Cart() {
     const themeMode = useSelector((state) => state.theme.themeMode);

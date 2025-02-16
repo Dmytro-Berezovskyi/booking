@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 import { setReserve } from "../../store/slices/reservedHotelsSlice";
+import { openModal } from "../../store/slices/oneHotelSlice";
 import { fetchOneHotel } from "../../store/thunks/oneHotelThunk";
+
+import ModalGoToCart from "./ModalGoToCart";
 
 import {Button, Divider, Rate} from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
@@ -21,6 +24,7 @@ export default function OneHotel() {
 
     const handleReserve = () => {
         dispatch(setReserve(hotel))
+        dispatch(openModal(true))
     }
 
     return (
@@ -56,6 +60,7 @@ export default function OneHotel() {
                                 >
                                     <span style={{fontWeight: "bold"}}>Reserve</span>
                                 </Button>
+                                <ModalGoToCart/>
                             </h1>
                         </Divider>
 

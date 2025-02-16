@@ -3,12 +3,17 @@ import { fetchOneHotel } from "../thunks/oneHotelThunk";
 
 const initialState = {
     hotel: [],
+    openModal: false,
 };
 
 const oneHotelSlice = createSlice({
     name: "hotel",
     initialState,
-    reducers: {},
+    reducers: {
+        openModal: (state, action) => {
+            state.openModal = action.payload;
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchOneHotel.pending, (state) => {
@@ -26,5 +31,9 @@ const oneHotelSlice = createSlice({
             })
     }
 })
+
+export const {
+    openModal
+} = oneHotelSlice.actions;
 
 export default oneHotelSlice.reducer;

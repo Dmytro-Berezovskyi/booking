@@ -1,0 +1,29 @@
+.errorPage-container {
+    height: 100vh;
+    margin: -50px;
+
+    background-image: url("https://images.pexels.com/photos/1824570/pexels-photo-1824570.jpeg");
+    background-size: cover;
+}
+
+.error-num {
+    margin: 0;
+
+    font-size: 20rem;
+    font-weight: bold;
+
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.errorPage-msg {
+    font-size: 2rem;
+
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.errorPage-btn {
+    color: rgba(17, 17, 17, 0.5);
+}
+.errorPage-btn:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
