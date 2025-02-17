@@ -15,7 +15,7 @@ export default function OneHotel() {
     const { id } = useParams();
     const themeMode = useSelector((state) => state.theme.themeMode);
     const hotel = useSelector(state => state.oneHotel.hotel);
-    const reservedHotels = useSelector((state) => state.reservedHotels.reservedHotels);
+
     const dispatch = useDispatch();
 
     useEffect(() => {

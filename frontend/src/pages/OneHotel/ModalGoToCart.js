@@ -9,7 +9,10 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 export default function ModalGoToCart() {
     const open = useSelector((state) => state.oneHotel.openModal);
     const hotel = useSelector(state => state.oneHotel.hotel);
-    console.log(hotel);
+    const reservedHotels = useSelector((state) => state.reservedHotels.reservedHotels);
+    const reservedHotel = reservedHotels.find((selected) => selected.id === hotel.id);
+    console.log(reservedHotel);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -46,6 +49,12 @@ export default function ModalGoToCart() {
                             <span style={{color: "rgba(17,17,17,0.3)"}}>
                                 Phone number: <span style={{color: "#111111"}}>
                                     {hotel.phone_number}
+                                </span>
+                            </span>) : null}
+                        {reservedHotel ? (
+                            <span style={{color: "rgba(17,17,17,0.3)"}}>
+                                Rooms: <span style={{color: "#111111"}}>
+                                    {reservedHotel.quantity}
                                 </span>
                             </span>) : null}
                     </Flex>
