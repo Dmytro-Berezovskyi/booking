@@ -64,7 +64,7 @@ export default function OneHotel() {
                             </h1>
                         </Divider>
 
-                        <div style={{display: "flex", gap: "20px"}}>
+                        <div style={{display: "flex", gap: "20px", marginBottom: "10px"}}>
                             <span style={{
                                     fontStyle: "italic",
                                     color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")}}
@@ -96,6 +96,15 @@ export default function OneHotel() {
                                 </a>
                             ) : null}
                         </div>
+
+                        <span style={{
+                                fontWeight: "bold",
+                                fontSize: "18px",
+                                color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")
+                        }}
+                        >
+                            Price per night: {hotel.price}$
+                        </span>
 
                         <p style={{
                             fontWeight: "600",
