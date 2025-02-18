@@ -51,7 +51,6 @@ export default function HeaderFooterLayout () {
                 components: {
                     Switch: {
                         colorPrimary: "",
-                        colorPrimaryHover: "rgba(112,112,112,0.60)",
                         handleBg: (themeMode === "dark" ? "rgb(206,178,149)" : "rgb(255,213,118)")
                     },
                     Layout: {
@@ -120,6 +119,7 @@ export default function HeaderFooterLayout () {
                         checkedChildren={<MoonOutlined/>}
                         unCheckedChildren={<SunOutlined/>}
                         onChange={switchOnChange}
+                        style={{backgroundColor: themeMode === "dark" ? "rgba(112,112,112,0.60)" : "#97bcf6"}}
                     />
 
                 </Header>
