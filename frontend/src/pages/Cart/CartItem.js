@@ -1,6 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
-import { Form, Field, ErrorMessage, Formik } from "formik";
+import { Form, Field, Formik } from "formik";
 
 import { removeReserve } from "../../store/slices/reservedHotelsSlice";
 
@@ -139,8 +138,7 @@ export default function CartItem () {
                                                     >
                                                         <MinusOutlined style={{fontSize: "14px"}}/>
                                                     </Button>
-                                                    <span
-                                                        style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>{values.adults}</span>
+                                                    <span>{values.adults}</span>
                                                     <Button
                                                         onClick={() => setFieldValue("adults", values.adults + 1)}
                                                         style={{border: "none", height: "100%", marginLeft: "5px"}}
@@ -172,8 +170,7 @@ export default function CartItem () {
                                                     >
                                                         <MinusOutlined style={{fontSize: "14px"}}/>
                                                     </Button>
-                                                    <span
-                                                        style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>{values.children}</span>
+                                                    <span>{values.children}</span>
                                                     <Button
                                                         onClick={() => setFieldValue("children", values.children + 1)}
                                                         style={{border: "none", height: "100%", marginLeft: "5px"}}
@@ -205,9 +202,7 @@ export default function CartItem () {
                                                     >
                                                         <MinusOutlined style={{fontSize: "14px"}}/>
                                                     </Button>
-                                                    <span
-                                                        style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>{values.quantity}
-                                                    </span>
+                                                    <span>{values.quantity}</span>
                                                     <Button
                                                         onClick={() => setFieldValue("quantity", values.quantity + 1)}
                                                         style={{border: "none", height: "100%", marginLeft: "5px"}}
