@@ -8,6 +8,7 @@ import { Button } from "antd";
 
 
 export default function ButtonModal() {
+    const themeMode = useSelector((state) => state.theme.themeMode);
     const userData = useSelector((state) => state.user.userData);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export default function ButtonModal() {
 
     return (
         <>
-            {(localStorage.getItem("user") ? <span>Hello {userData.name}!</span> : null)}
+            {(localStorage.getItem("user") ? <span style={{color: (themeMode === "dark" ? "rgba(255, 255, 255, 0.65)" : "#111111")}}>Hello {userData.name}!</span> : null)}
             <Button onClick={showModal} className="custom-button" icon={<UserOutlined className="custom-icon" />}>
                 <span className="custom-text">Account</span>
             </Button>
