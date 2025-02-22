@@ -5,6 +5,7 @@ import { toggleThemeMode } from "../../store/slices/themeSlice";
 
 import ButtonModal from "./ButtonModal";
 import ModalLogIn from "./ModalLogIn";
+import SearchHotel from "./SearchHotel";
 
 import {ConfigProvider, Layout, Menu, theme, Switch, Button, Flex} from "antd";
 import { SunOutlined, MoonOutlined, ShoppingCartOutlined } from "@ant-design/icons";
@@ -102,7 +103,9 @@ export default function HeaderFooterLayout () {
                         style={{flex: 1, minWidth: 0}}
                         theme={themeMode}
                     />
+
                     <Flex gap="20px" align="center" style={{marginRight: "20px"}}>
+                        <SearchHotel/>
                         <ButtonModal/>
                         <ModalLogIn/>
 
