@@ -11,7 +11,6 @@ export default function ModalGoToCart() {
     const hotel = useSelector(state => state.oneHotel.hotel);
     const reservedHotels = useSelector((state) => state.reservedHotels.reservedHotels);
     const reservedHotel = reservedHotels.find((selected) => selected.id === hotel.id);
-    console.log(reservedHotel);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

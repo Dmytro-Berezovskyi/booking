@@ -5,11 +5,11 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 export const fetchSearch = createAsyncThunk("hotels/fetchSearch", async (debounceValue, { rejectWithValue }) => {
     try {
-        const { data } = await axios.get(`${API_URL}/hotels`, {
+        const searchHotels = await axios.get(`${API_URL}/search`, {
             params: { query: debounceValue }
         });
 
-        return data;
+        return searchHotels.data;
     } catch (e) {
         return rejectWithValue(e.response?.data?.message || e.message);
     }
