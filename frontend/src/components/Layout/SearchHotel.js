@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import useDebounce from "../../hooks/useDebounce";
+import { fetchSearch } from "../../store/thunks/searchThunk";
 
 import { Input } from "antd";
 const { Search } = Input;
@@ -8,17 +10,18 @@ const { Search } = Input;
 export default function SearchHotel() {
     const [query, setQuery] = useState("");
     const debounceValue = useDebounce(query, 500);
+    const dispatch = useDispatch();
+    const searchHotel = useSelector((state) => state.searchHotel.searchHotel);
+    console.log(searchHotel);
 
     useEffect(() => {
-        if(debounceValue) {
-            console.log("Sending data to the server...", debounceValue);
+        if(debounceValue.trim()) {
+            dispatch(fetchSearch(debounceValue));
         }
-    }, [debounceValue]);
+    }, [debounceValue, dispatch]);
 
-    const handleSearch = (value) => {
-        if (value) {
-            setQuery(value.target.value);
-        }
+    const handleSearch = (e) => {
+        setQuery(e.target.value);
     }
 
     return (
@@ -33,6 +36,13 @@ export default function SearchHotel() {
                     width: 300,
                 }}
             />
+            <ul>
+                {searchHotel.length > 0 ? (
+                    searchHotel.map((hotel) => (
+                        <li key={hotel.id}>{hotel.name} - {hotel.city}</li>
+                    ))
+                ) : query && <p>Нічого не знайдено</p>}
+            </ul>
         </>
     )
 }
