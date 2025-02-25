@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import useDebounce from "../../hooks/useDebounce";
@@ -9,9 +10,9 @@ const { Search } = Input;
 
 export default function SearchHotel() {
     const [query, setQuery] = useState("");
+    const searchHotel = useSelector((state) => state.searchHotel.searchHotel);
     const debounceValue = useDebounce(query, 500);
     const dispatch = useDispatch();
-    const searchHotel = useSelector((state) => state.searchHotel.searchHotel);
 
     useEffect(() => {
         if(debounceValue.trim()) {
@@ -21,7 +22,7 @@ export default function SearchHotel() {
     }, [debounceValue, dispatch]);
     console.log(searchHotel);
 
-    const handleSearch = (e) => {
+    const handleChange = (e) => {
         setQuery(e.target.value);
     }
 
@@ -32,19 +33,29 @@ export default function SearchHotel() {
                     placeholder="search hotel"
                     allowClear
                     value={query}
-                    onChange={handleSearch}
-                    onSearch={handleSearch}
+                    onChange={handleChange}
                     style={{
                         width: 300,
                     }}
                 />
-                <ul style={{position: "absolute", top: "35px", width: "270px", background: "white", boxShadow: "4px 4px 8px 0px rgba(34, 60, 80, 0.2)"}} >
-                    {searchHotel.length > 0 ? (
-                        searchHotel.map((hotel) => (
-                            <li key={hotel.id}>{hotel.name} - {hotel.city}</li>
-                        ))
-                    ) : query && <p>hotel not found</p>}
-                </ul>
+                {searchHotel !== [] ? (
+                    <ul style={{
+                        position: "absolute",
+                        top: "35px",
+                        width: "270px",
+                        background: "white",
+                        boxShadow: "4px 4px 8px 0px rgba(34, 60, 80, 0.2)"
+                    }}>
+                        {searchHotel.length > 0 ? (
+                            searchHotel.map((hotel) => (
+                                <NavLink to={`/hotel/${hotel.id}`}>
+                                    <li key={hotel.id}>{hotel.name} - {hotel.city}</li>
+                                </NavLink>
+                            ))
+                        ) : query && <p>hotel not found</p>}
+                    </ul>
+                ) : null}
+
             </Flex>
         </>
     )

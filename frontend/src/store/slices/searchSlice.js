@@ -11,7 +11,11 @@ const initialState = {
 const searchSlice = createSlice({
     name: "searchHotel",
     initialState,
-    reducers: {},
+    reducers: {
+        clearSearch: (state, action) => {
+            state.searchHotel = [];
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchSearch.pending, (state) => {
@@ -31,3 +35,5 @@ const searchSlice = createSlice({
 })
 
 export default searchSlice.reducer;
+
+export const { clearSearch } = searchSlice.actions;
