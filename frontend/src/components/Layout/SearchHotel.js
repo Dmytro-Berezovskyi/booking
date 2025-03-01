@@ -31,7 +31,7 @@ export default function SearchHotel() {
     }
 
     const handleBlur = () => {
-        //setTimeout(() => setIsDropdownVisible(false), 200);
+        setTimeout(() => setIsDropdownVisible(false), 200);
     }
 
     const handleSelectHotel = (hotelId) => {
