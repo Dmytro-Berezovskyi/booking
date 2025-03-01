@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 import { setReserve } from "../../store/slices/reservedHotelsSlice";
@@ -20,7 +20,7 @@ export default function OneHotel() {
 
     useEffect(() => {
         dispatch(fetchOneHotel({ id }))
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     const handleReserve = () => {
         dispatch(setReserve(hotel))
