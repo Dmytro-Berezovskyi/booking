@@ -118,7 +118,8 @@
       "phone_number": "18005740835",
       "website": "https://www.woogo.com",
       "photo": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description": "At Woogo Central Park - Tempo Apartments, experience a harmonious blend of modern amenities and timeless design. Whether you're visiting for leisure or business, our prime location and exceptional service ensure every moment is unforgettable."
+      "description": "At Woogo Central Park - Tempo Apartments, experience a harmonious blend of modern amenities and timeless design. Whether you're visiting for leisure or business, our prime location and exceptional service ensure every moment is unforgettable.",
+      "price": 220
     },
     {
       "id": 11003176,
@@ -131,7 +132,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description": "Amolite Hotel offers a peaceful escape in the bustling heart of the city. Relax in well-appointed rooms and enjoy top-tier facilities that cater to your every need."
+      "description": "Amolite Hotel offers a peaceful escape in the bustling heart of the city. Relax in well-appointed rooms and enjoy top-tier facilities that cater to your every need.",
+      "price": 150
     },
     {
       "id": 747134,
@@ -144,7 +146,8 @@
       "phone_number": "212260414",
       "website": null,
       "photo": "https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Redford Hotel is the ideal choice for professionals on the go. With state-of-the-art meeting facilities and a location near major business hubs, we ensure your productivity and relaxation."
+      "description":"Redford Hotel is the ideal choice for professionals on the go. With state-of-the-art meeting facilities and a location near major business hubs, we ensure your productivity and relaxation.",
+      "price": 300
     },
     {
       "id": 720550,
@@ -157,7 +160,8 @@
       "phone_number": "1 212 2191018",
       "website": null,
       "photo": "https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Bring your loved ones to Hotel Richland New York, where spacious rooms and kid-friendly amenities create unforgettable family memories. Your next adventure starts here!"
+      "description":"Bring your loved ones to Hotel Richland New York, where spacious rooms and kid-friendly amenities create unforgettable family memories. Your next adventure starts here!",
+      "price": 240
     },
     {
       "id": 797074,
@@ -170,7 +174,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"At Studio Lux Times Square, indulgence knows no bounds. From elegant suites to world-class dining, every detail is designed to elevate your stay."
+      "description":"At Studio Lux Times Square, indulgence knows no bounds. From elegant suites to world-class dining, every detail is designed to elevate your stay.",
+      "price": 250
     },
     {
       "id": 742987,
@@ -183,7 +188,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stay at The Bowery Hotel and unlock access to thrilling activities and local attractions. From outdoor adventures to cultural experiences, there's something for everyone."
+      "description":"Stay at The Bowery Hotel and unlock access to thrilling activities and local attractions. From outdoor adventures to cultural experiences, there's something for everyone.",
+      "price": 270
     },
     {
       "id": 743452,
@@ -196,7 +202,8 @@
       "phone_number": "1-212-398-2700",
       "website": null,
       "photo": "https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"AC Hotel by Marriott New York Times Square is your perfect escape for two. Enjoy intimate settings, personalized service, and an ambiance made for romance."
+      "description":"AC Hotel by Marriott New York Times Square is your perfect escape for two. Enjoy intimate settings, personalized service, and an ambiance made for romance.",
+      "price": 210
     },
     {
       "id": 260469,
@@ -209,7 +216,8 @@
       "phone_number": "1 212 777-0012",
       "website": null,
       "photo": "https://images.pexels.com/photos/440155/pexels-photo-440155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Rejuvenate your body and mind at The Ridge Hotel. With a state-of-the-art spa, wellness programs, and serene surroundings, relaxation is always within reach."
+      "description":"Rejuvenate your body and mind at The Ridge Hotel. With a state-of-the-art spa, wellness programs, and serene surroundings, relaxation is always within reach.",
+      "price": 225
     },
     {
       "id": 740399,
@@ -222,7 +230,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"SoHo 54 Hotel offers an exclusive, intimate experience with stylish interiors and personalized service. Perfect for travelers seeking charm and comfort."
+      "description":"SoHo 54 Hotel offers an exclusive, intimate experience with stylish interiors and personalized service. Perfect for travelers seeking charm and comfort.",
+      "price": 240
     },
     {
       "id": 5018104,
@@ -235,7 +244,8 @@
       "phone_number": "XX",
       "website": null,
       "photo": "https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Escape to Hotel Alexander, nestled amid stunning natural landscapes. Ideal for nature lovers, our hotel provides tranquility and breathtaking views."
+      "description":"Escape to Hotel Alexander, nestled amid stunning natural landscapes. Ideal for nature lovers, our hotel provides tranquility and breathtaking views.",
+      "price": 320
     },
     {
       "id": 792811,
@@ -248,7 +258,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Nestled in a building rich with history, 119 West 56th Street combines classic charm with modern conveniences. Discover a unique stay that celebrates the past while embracing the present."
+      "description":"Nestled in a building rich with history, 119 West 56th Street combines classic charm with modern conveniences. Discover a unique stay that celebrates the past while embracing the present.",
+      "price": 340
     },
     {
       "id": 804220,
@@ -261,7 +272,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Located in the heart of the city, Central Park View B&B puts you steps away from iconic landmarks, shopping, and dining. Experience the vibrant urban lifestyle with ease."
+      "description":"Located in the heart of the city, Central Park View B&B puts you steps away from iconic landmarks, shopping, and dining. Experience the vibrant urban lifestyle with ease.",
+      "price": 290
     },
     {
       "id": 5018107,
@@ -274,7 +286,8 @@
       "phone_number": "17186985000",
       "website": null,
       "photo": "https://images.pexels.com/photos/3634741/pexels-photo-3634741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Immerse yourself in local traditions at Staten Island Hotel. With its close proximity to cultural hotspots, you'll discover the true essence of the region."
+      "description":"Immerse yourself in local traditions at Staten Island Hotel. With its close proximity to cultural hotspots, you'll discover the true essence of the region.",
+      "price": 350
     },
     {
       "id": 700390,
@@ -287,7 +300,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Mondrian Park Avenue combines sleek architecture with innovative technology to offer a truly contemporary stay. Experience the future of hospitality with us."
+      "description":"Mondrian Park Avenue combines sleek architecture with innovative technology to offer a truly contemporary stay. Experience the future of hospitality with us.",
+      "price": 360
     },
     {
       "id": 742946,
@@ -300,7 +314,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2029719/pexels-photo-2029719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Celebrate creativity at Pod Times Square, where art and design take center stage. Explore a unique ambiance inspired by local and global artistic influences."
+      "description":"Celebrate creativity at Pod Times Square, where art and design take center stage. Explore a unique ambiance inspired by local and global artistic influences.",
+      "price": 190
     },
     {
       "id": 776932,
@@ -313,7 +328,8 @@
       "phone_number": "121-247-51920",
       "website": "https://freehandhotels.com/new-york/rooms/",
       "photo": "https://images.pexels.com/photos/2507010/pexels-photo-2507010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stay sustainably at Freehand New York, where green practices and eco-conscious amenities ensure a guilt-free getaway that’s kind to the planet."
+      "description":"Stay sustainably at Freehand New York, where green practices and eco-conscious amenities ensure a guilt-free getaway that’s kind to the planet.",
+      "price": 220
     },
     {
       "id": 741741,
@@ -326,7 +342,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"The Grand NYC is your gateway to adventure in the mountains. Enjoy cozy accommodations, breathtaking views, and easy access to hiking and skiing."
+      "description":"The Grand NYC is your gateway to adventure in the mountains. Enjoy cozy accommodations, breathtaking views, and easy access to hiking and skiing.",
+      "price": 210
     },
     {
       "id": 716815,
@@ -339,7 +356,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Hello Broadway embodies elegance with its grand interiors and refined service. Ideal for those seeking a sophisticated retreat with a touch of glamour."
+      "description":"Hello Broadway embodies elegance with its grand interiors and refined service. Ideal for those seeking a sophisticated retreat with a touch of glamour.",
+      "price": 215
     },
     {
       "id": 802583,
@@ -352,7 +370,8 @@
       "phone_number": "+1 212 842 5500",
       "website": null,
       "photo": "https://images.pexels.com/photos/2598638/pexels-photo-2598638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Perfect for a quick getaway, The Dominick offers everything you need for a relaxing weekend: great dining, cozy rooms, and a prime location."
+      "description":"Perfect for a quick getaway, The Dominick offers everything you need for a relaxing weekend: great dining, cozy rooms, and a prime location.",
+      "price": 320
     },
     {
       "id": 5018106,
@@ -365,7 +384,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Escape to HomeStay NYC, your tropical haven surrounded by crystal-clear waters and white sandy beaches. Relax, unwind, and embrace island life."
+      "description":"Escape to HomeStay NYC, your tropical haven surrounded by crystal-clear waters and white sandy beaches. Relax, unwind, and embrace island life.",
+      "price": 180
     },
     {
       "id": 751736,
@@ -378,7 +398,8 @@
       "phone_number": "703-261-5677",
       "website": null,
       "photo": "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Discover affordable excellence at Fairfield Inn & Suites by Marriott/World Trade Center Area. Enjoy cozy accommodations, excellent service, and all the essentials without breaking the bank."
+      "description":"Discover affordable excellence at Fairfield Inn & Suites by Marriott/World Trade Center Area. Enjoy cozy accommodations, excellent service, and all the essentials without breaking the bank.",
+      "price": 265
     },
     {
       "id": 386689,
@@ -391,7 +412,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2134224/pexels-photo-2134224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"At Back Bay Suites, your furry friends are always welcome! We offer pet-friendly amenities to make traveling with your companions a breeze."
+      "description":"At Back Bay Suites, your furry friends are always welcome! We offer pet-friendly amenities to make traveling with your companions a breeze.",
+      "price": 240
     },
     {
       "id": 567484,
@@ -404,7 +426,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2290753/pexels-photo-2290753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Indulge your taste buds at Global Luxury Suites at The Theatre District, where exceptional cuisine meets world-class hospitality. Savor every moment of your stay with our gourmet offerings."
+      "description":"Indulge your taste buds at Global Luxury Suites at The Theatre District, where exceptional cuisine meets world-class hospitality. Savor every moment of your stay with our gourmet offerings.",
+      "price": 380
     },
     {
       "id": 677300,
@@ -417,7 +440,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3201921/pexels-photo-3201921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Relax by the water at Vibrant 1BR in Fenway by Sonder, offering serene views and a tranquil atmosphere. Perfect for a peaceful escape from the everyday hustle."
+      "description":"Relax by the water at Vibrant 1BR in Fenway by Sonder, offering serene views and a tranquil atmosphere. Perfect for a peaceful escape from the everyday hustle.",
+      "price": 370
     },
     {
       "id": 820605,
@@ -430,7 +454,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2506990/pexels-photo-2506990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Unique 1BR in Financial District by Sonder redefines sophistication with its chic interiors and modern vibe. Perfect for travelers who appreciate style and elegance."
+      "description":"Unique 1BR in Financial District by Sonder redefines sophistication with its chic interiors and modern vibe. Perfect for travelers who appreciate style and elegance.",
+      "price": 229
     },
     {
       "id": 731189,
@@ -443,7 +468,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/271655/pexels-photo-271655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Surrounded by rolling hills and fresh air, Charming 2BR in South End by Sonder offers a cozy retreat for nature lovers and those looking to unwind in a rural setting."
+      "description":"Surrounded by rolling hills and fresh air, Charming 2BR in South End by Sonder offers a cozy retreat for nature lovers and those looking to unwind in a rural setting.",
+      "price": 285
     },
     {
       "id": 721848,
@@ -456,7 +482,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1145257/pexels-photo-1145257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Step back in time at Stunning 4BR in Downtown Crossing by Sonder, where timeless design and graceful service come together to create an unforgettable experience."
+      "description":"Step back in time at Stunning 4BR in Downtown Crossing by Sonder, where timeless design and graceful service come together to create an unforgettable experience.",
+      "price": 270
     },
     {
       "id": 677341,
@@ -469,7 +496,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3688261/pexels-photo-3688261.jpeg",
-      "description":"Stay at Classic 3BR in Allston by Sonder, the perfect base for thrill-seekers. With easy access to outdoor activities and adventure sports, excitement is guaranteed."
+      "description":"Stay at Classic 3BR in Allston by Sonder, the perfect base for thrill-seekers. With easy access to outdoor activities and adventure sports, excitement is guaranteed.",
+      "price": 255
     },
     {
       "id": 677347,
@@ -482,7 +510,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Wake up to the soothing sights and sounds of the lake at Posh 2BR in Allston by Sonder. Whether for relaxation or water activities, it’s an idyllic destination."
+      "description":"Wake up to the soothing sights and sounds of the lake at Posh 2BR in Allston by Sonder. Whether for relaxation or water activities, it’s an idyllic destination.",
+      "price": 340
     },
     {
       "id": 810445,
@@ -495,7 +524,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Sophisticated 2BR in Downtown Crossing by Sonder combines contemporary design with ultimate comfort, creating a welcoming space for both leisure and business travelers."
+      "description":"Sophisticated 2BR in Downtown Crossing by Sonder combines contemporary design with ultimate comfort, creating a welcoming space for both leisure and business travelers.",
+      "price": 360
     },
     {
       "id": 677372,
@@ -508,7 +538,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/70441/pexels-photo-70441.jpeg",
-      "description":"Enjoy breathtaking sunsets every evening at Posh Studio in Downtown Crossing by Sonder, perfectly situated to offer stunning vistas you’ll never forget."
+      "description":"Enjoy breathtaking sunsets every evening at Posh Studio in Downtown Crossing by Sonder, perfectly situated to offer stunning vistas you’ll never forget.",
+      "price": 345
     },
     {
       "id": 822534,
@@ -521,7 +552,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stay at Playful 1BR in Fenway by Sonder and explore the vibrant culture and history of the region, with local attractions just steps away."
+      "description":"Stay at Playful 1BR in Fenway by Sonder and explore the vibrant culture and history of the region, with local attractions just steps away.",
+      "price": 380
     },
     {
       "id": 793847,
@@ -534,7 +566,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2507010/pexels-photo-2507010.jpeg",
-      "description":"Pamper yourself at Stunning 1 BR In Allston by Sonder, where a world-class spa and wellness center promise total rejuvenation and relaxation."
+      "description":"Pamper yourself at Stunning 1 BR In Allston by Sonder, where a world-class spa and wellness center promise total rejuvenation and relaxation.",
+      "price": 290
     },
     {
       "id": 677396,
@@ -547,7 +580,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Sonder - St. Mary's offers a refined yet unpretentious atmosphere, making it an ideal choice for travelers who value understated elegance."
+      "description":"Sonder - St. Mary's offers a refined yet unpretentious atmosphere, making it an ideal choice for travelers who value understated elegance.",
+      "price": 335
     },
     {
       "id": 677411,
@@ -560,7 +594,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/53577/hotel-architectural-tourism-travel-53577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"For the adventure enthusiast, Bright 2BR in Downtown Crossing by Sonder provides access to exciting activities like hiking, kayaking, and more, ensuring every day is unforgettable."
+      "description":"For the adventure enthusiast, Bright 2BR in Downtown Crossing by Sonder provides access to exciting activities like hiking, kayaking, and more, ensuring every day is unforgettable.",
+      "price": 325
     },
     {
       "id": 677410,
@@ -573,7 +608,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/261388/pexels-photo-261388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Feel right at home at Simple 1BR in Theater District by Sonder with cozy rooms, warm hospitality, and all the comforts you need for a perfect stay."
+      "description":"Feel right at home at Simple 1BR in Theater District by Sonder with cozy rooms, warm hospitality, and all the comforts you need for a perfect stay.",
+      "price": 300
     },
     {
       "id": 677425,
@@ -586,7 +622,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/453201/pexels-photo-453201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Experience unparalleled sophistication at Central 2BR in South End by Sonder, where modern luxury and meticulous attention to detail define your stay."
+      "description":"Experience unparalleled sophistication at Central 2BR in South End by Sonder, where modern luxury and meticulous attention to detail define your stay.",
+      "price": 200
     },
     {
       "id": 677426,
@@ -599,7 +636,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3124079/pexels-photo-3124079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Find your sanctuary at Classic 1BR in Fenway by Sonder, tucked away in a peaceful location perfect for unwinding and disconnecting."
+      "description":"Find your sanctuary at Classic 1BR in Fenway by Sonder, tucked away in a peaceful location perfect for unwinding and disconnecting.",
+      "price": 220
     },
     {
       "id": 721859,
@@ -612,7 +650,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/167533/pexels-photo-167533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stay close to the action at Hip 3BR in Downtown Crossing by Sonder, conveniently located near top shopping destinations and bustling markets."
+      "description":"Stay close to the action at Hip 3BR in Downtown Crossing by Sonder, conveniently located near top shopping destinations and bustling markets.",
+      "price": 205
     },
     {
       "id": 801610,
@@ -625,7 +664,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg",
-      "description":"Playful 2BR in South End by Sonder is the perfect choice for couples seeking privacy and charm. With intimate settings and thoughtful touches, romance is always in the air."
+      "description":"Playful 2BR in South End by Sonder is the perfect choice for couples seeking privacy and charm. With intimate settings and thoughtful touches, romance is always in the air.",
+      "price": 370
     },
     {
       "id": 677429,
@@ -638,7 +678,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/635041/pexels-photo-635041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Experience the city’s pulse at Airy 2BR in Allston by Sonder, located steps away from lively bars, clubs, and entertainment hotspots."
+      "description":"Experience the city’s pulse at Airy 2BR in Allston by Sonder, located steps away from lively bars, clubs, and entertainment hotspots.",
+      "price": 500
     },
     {
       "id": 677433,
@@ -651,7 +692,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Relax at Bright 1BR in South End by Sonder, where sandy shores and ocean breezes create the ultimate beachfront getaway."
+      "description":"Relax at Bright 1BR in South End by Sonder, where sandy shores and ocean breezes create the ultimate beachfront getaway.",
+      "price": 210
     },
     {
       "id": 677449,
@@ -664,7 +706,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2883048/pexels-photo-2883048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Industrial 3BR in Downtown by Sonder offers the perfect balance for business travelers, with meeting facilities, high-speed Wi-Fi, and a comfortable place to unwind.\n"
+      "description":"Industrial 3BR in Downtown by Sonder offers the perfect balance for business travelers, with meeting facilities, high-speed Wi-Fi, and a comfortable place to unwind.",
+      "price": 420
     },
     {
       "id": 677450,
@@ -677,7 +720,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Escape to Chic 1BR in Downtown Crossing by Sonder, a cozy haven that blends warm hospitality with scenic surroundings for a truly enchanting stay."
+      "description":"Escape to Chic 1BR in Downtown Crossing by Sonder, a cozy haven that blends warm hospitality with scenic surroundings for a truly enchanting stay.",
+      "price": 220
     },
     {
       "id": 677452,
@@ -690,7 +734,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2291624/pexels-photo-2291624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Satisfy your cravings at Sonder - Financial District, featuring exceptional on-site dining and easy access to renowned local restaurants."
+      "description":"Satisfy your cravings at Sonder - Financial District, featuring exceptional on-site dining and easy access to renowned local restaurants.",
+      "price": 400
     },
     {
       "id": 677455,
@@ -703,7 +748,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3771110/pexels-photo-3771110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Immerse yourself in creativity at Bright Studio in Downtown Crossing by Sonder, adorned with local art and located near galleries and cultural landmarks."
+      "description":"Immerse yourself in creativity at Bright Studio in Downtown Crossing by Sonder, adorned with local art and located near galleries and cultural landmarks.",
+      "price": 399
     },
     {
       "id": 677470,
@@ -716,7 +762,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/279805/pexels-photo-279805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Central 3BR in South End by Sonder makes traveling simple with its close proximity to airports, train stations, and public transportation hubs."
+      "description":"Central 3BR in South End by Sonder makes traveling simple with its close proximity to airports, train stations, and public transportation hubs.",
+      "price": 220
     },
     {
       "id": 677476,
@@ -729,7 +776,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2291636/pexels-photo-2291636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Nestled in the mountains, Smart 2BR in Brighton by Sonder is a winter wonderland offering skiing, snowboarding, and cozy fireside evenings."
+      "description":"Nestled in the mountains, Smart 2BR in Brighton by Sonder is a winter wonderland offering skiing, snowboarding, and cozy fireside evenings.",
+      "price": 299
     },
     {
       "id": 677477,
@@ -742,7 +790,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/5371484/pexels-photo-5371484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Enjoy the full resort experience at Hip 1BR in Allston by Sonder, complete with pools, fitness centers, and plenty of amenities for a luxurious stay."
+      "description":"Enjoy the full resort experience at Hip 1BR in Allston by Sonder, complete with pools, fitness centers, and plenty of amenities for a luxurious stay.",
+      "price": 250
     },
     {
       "id": 677480,
@@ -755,7 +804,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stay at Smart 1BR in Downtown Crossing by Sonder, where lush gardens and eco-friendly practices create a serene environment perfect for relaxation."
+      "description":"Stay at Smart 1BR in Downtown Crossing by Sonder, where lush gardens and eco-friendly practices create a serene environment perfect for relaxation.",
+      "price": 320
     },
     {
       "id": 677481,
@@ -768,7 +818,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6394711/pexels-photo-6394711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Hip 2BR in Allston by Sonder puts you at the heart of the action, offering easy access to major festivals, events, and local celebrations."
+      "description":"Hip 2BR in Allston by Sonder puts you at the heart of the action, offering easy access to major festivals, events, and local celebrations.",
+      "price": 440
     },
     {
       "id": 677519,
@@ -781,7 +832,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6466304/pexels-photo-6466304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Charming 1BR in Fenway by Sonder boasts stunning waterfront views, offering guests a peaceful retreat with plenty of outdoor activities to enjoy."
+      "description":"Charming 1BR in Fenway by Sonder boasts stunning waterfront views, offering guests a peaceful retreat with plenty of outdoor activities to enjoy.",
+      "price": 229
     },
     {
       "id": 677520,
@@ -794,7 +846,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2291599/pexels-photo-2291599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Experience the charm of the past at Lively 1BR in Theater District by Sonder, a beautifully restored historic property that tells a story with every corner."
+      "description":"Experience the charm of the past at Lively 1BR in Theater District by Sonder, a beautifully restored historic property that tells a story with every corner.",
+      "price": 320
     },
     {
       "id": 705227,
@@ -807,7 +860,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1134175/pexels-photo-1134175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Discover your private paradise at Charming 1BR in Seaport by Sonder, a secluded island retreat where tranquility meets luxury."
+      "description":"Discover your private paradise at Charming 1BR in Seaport by Sonder, a secluded island retreat where tranquility meets luxury.",
+      "price": 420
     },
     {
       "id": 696618,
@@ -820,7 +874,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/528427/pexels-photo-528427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Central 1BR in Fenway by Sonder is perfect for families, offering kid-friendly amenities, spacious accommodations, and activities for all ages."
+      "description":"Central 1BR in Fenway by Sonder is perfect for families, offering kid-friendly amenities, spacious accommodations, and activities for all ages.",
+      "price": 270
     },
     {
       "id": 677526,
@@ -833,7 +888,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6284232/pexels-photo-6284232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Located in the city’s most vibrant district, Simple Studio in Downtown Crossing by Sonder combines sleek design, premium amenities, and a prime location.\n"
+      "description":"Located in the city’s most vibrant district, Simple Studio in Downtown Crossing by Sonder combines sleek design, premium amenities, and a prime location.",
+      "price": 345
     },
     {
       "id": 677527,
@@ -846,7 +902,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3682240/pexels-photo-3682240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Modern 3BR in Brighton by Sonder is your ticket to paradise, with palm-lined pools, vibrant tropical surroundings, and sunny skies all year round."
+      "description":"Modern 3BR in Brighton by Sonder is your ticket to paradise, with palm-lined pools, vibrant tropical surroundings, and sunny skies all year round.",
+      "price": 360
     },
     {
       "id": 677528,
@@ -859,7 +916,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6474535/pexels-photo-6474535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Immerse yourself in a blend of traditions at Pleasant Back Bay Suites by Sonder, where the décor and cuisine reflect the spirit of the destination."
+      "description":"Immerse yourself in a blend of traditions at Pleasant Back Bay Suites by Sonder, where the décor and cuisine reflect the spirit of the destination.",
+      "price": 370
     },
     {
       "id": 677537,
@@ -872,7 +930,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2029719/pexels-photo-2029719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Recharge your body and soul at Sonder - The Continuum, offering yoga classes, spa treatments, and healthy dining options for a complete wellness experience."
+      "description":"Recharge your body and soul at Sonder - The Continuum, offering yoga classes, spa treatments, and healthy dining options for a complete wellness experience.",
+      "price": 380
     },
     {
       "id": 696614,
@@ -885,7 +944,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/1861153/pexels-photo-1861153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Smart 1BR in Seaport by Sonder combines opulent amenities with breathtaking natural surroundings, offering an idyllic escape from the everyday."
+      "description":"Smart 1BR in Seaport by Sonder combines opulent amenities with breathtaking natural surroundings, offering an idyllic escape from the everyday.",
+      "price": 220
     },
     {
       "id": 677694,
@@ -898,7 +958,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2649771/pexels-photo-2649771.jpeg",
-      "description":"With stylish décor and a welcoming atmosphere, Unique 2BR in Downtown Crossing by Sonder is the perfect blend of comfort and sophistication for any traveler."
+      "description":"With stylish décor and a welcoming atmosphere, Unique 2BR in Downtown Crossing by Sonder is the perfect blend of comfort and sophistication for any traveler.",
+      "price": 410
     },
     {
       "id": 677550,
@@ -911,7 +972,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3316922/pexels-photo-3316922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Indulge in gourmet dining at Posh Studio in Back Bay by Sonder, where every meal is a culinary masterpiece crafted with the finest ingredients."
+      "description":"Indulge in gourmet dining at Posh Studio in Back Bay by Sonder, where every meal is a culinary masterpiece crafted with the finest ingredients.",
+      "price": 230
     },
     {
       "id": 787996,
@@ -924,7 +986,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3688261/pexels-photo-3688261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Vibrant 2BR in Downtown Crossing by Sonder offers an intimate, boutique experience with personalized service and attention to detail, perfect for those seeking something unique.\n"
+      "description":"Vibrant 2BR in Downtown Crossing by Sonder offers an intimate, boutique experience with personalized service and attention to detail, perfect for those seeking something unique.",
+      "price": 220
     },
     {
       "id": 731262,
@@ -937,7 +1000,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/5371563/pexels-photo-5371563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Stunning 3BR in Downtown Crossing by Sonder offers a peaceful retreat in the heart of the city, where you can relax and recharge without leaving the excitement behind."
+      "description":"Stunning 3BR in Downtown Crossing by Sonder offers a peaceful retreat in the heart of the city, where you can relax and recharge without leaving the excitement behind.",
+      "price": 220
     },
     {
       "id": 677559,
@@ -950,7 +1014,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/3768095/pexels-photo-3768095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"At Industrial 1BR in Downtown Crossing by Sonder, every detail is designed to delight. From plush rooms to exquisite service, expect luxury at every turn."
+      "description":"At Industrial 1BR in Downtown Crossing by Sonder, every detail is designed to delight. From plush rooms to exquisite service, expect luxury at every turn.",
+      "price": 230
     },
     {
       "id": 677565,
@@ -963,7 +1028,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/4577673/pexels-photo-4577673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Experience ultimate relaxation at Industrial 2BR in Downtown Crossing by Sonder, where comfortable accommodations and personalized service ensure a restful stay."
+      "description":"Experience ultimate relaxation at Industrial 2BR in Downtown Crossing by Sonder, where comfortable accommodations and personalized service ensure a restful stay.",
+      "price": 230
     },
     {
       "id": 677571,
@@ -976,7 +1042,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2952663/pexels-photo-2952663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Lovely Brighton Suites by Sonder offers a refined and private experience, perfect for those seeking an exclusive escape with exceptional service."
+      "description":"Lovely Brighton Suites by Sonder offers a refined and private experience, perfect for those seeking an exclusive escape with exceptional service.",
+      "price": 230
     },
     {
       "id": 724715,
@@ -989,7 +1056,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Modern 2BR in Downtown Crossing by Sonder is the perfect blend of adventure and relaxation, with access to thrilling outdoor activities and comfortable, restful rooms."
+      "description":"Modern 2BR in Downtown Crossing by Sonder is the perfect blend of adventure and relaxation, with access to thrilling outdoor activities and comfortable, restful rooms.",
+      "price": 220
     },
     {
       "id": 677574,
@@ -1002,7 +1070,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6434632/pexels-photo-6434632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Loft Style 2BR in Downtown Crossing by Sonder’s prime location means you’re always just moments away from the best attractions, shopping, and dining in the area."
+      "description":"Loft Style 2BR in Downtown Crossing by Sonder’s prime location means you’re always just moments away from the best attractions, shopping, and dining in the area.",
+      "price": 250
     },
     {
       "id": 677577,
@@ -1015,7 +1084,8 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/6466482/pexels-photo-6466482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description":"Chic 3BR in Lower Roxbury by Sonder invites you to enjoy a stylish and comfortable stay, where contemporary design meets exceptional service."
+      "description":"Chic 3BR in Lower Roxbury by Sonder invites you to enjoy a stylish and comfortable stay, where contemporary design meets exceptional service.",
+      "price": 250
     },
     {
       "id": 757401,
@@ -1028,7 +1098,708 @@
       "phone_number": null,
       "website": null,
       "photo": "https://images.pexels.com/photos/2873951/pexels-photo-2873951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "description": "Stunning 1BR in Theater District by Sonder offers a peaceful sanctuary away from the hustle and bustle. Surrounded by serene landscapes, it’s the perfect place to unwind, recharge, and reconnect with nature. Enjoy luxurious amenities and thoughtful touches that make every moment of your stay special."
+      "description": "Stunning 1BR in Theater District by Sonder offers a peaceful sanctuary away from the hustle and bustle. Surrounded by serene landscapes, it’s the perfect place to unwind, recharge, and reconnect with nature. Enjoy luxurious amenities and thoughtful touches that make every moment of your stay special.",
+      "price": 250
+    },
+    {
+      "id": 81736294,
+      "name": "Grand Atlanta Inn",
+      "address": "123 Peach St, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-404-555-1234",
+      "website": "https://grandatlantainn.com",
+      "photo": "https://images.unsplash.com/photo-1609949279531-cf48d64bed89?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Grand Atlanta Inn is a cozy hotel in the heart of Atlanta, perfect for tourists and business travelers.",
+      "price": 180
+    },
+    {
+      "id": 62947158,
+      "name": "Peachtree Suites",
+      "address": "456 Oak Ave, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-404-555-2345",
+      "website": "https://peachtreesuites.com",
+      "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+      "description": "Peachtree Suites offers luxurious accommodations in the heart of Atlanta with top-tier service.",
+      "price": 250
+    },
+    {
+      "id": 37284915,
+      "name": "Southern Comfort Hotel",
+      "address": "789 Maple Rd, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-404-555-3456",
+      "website": "https://southerncomforthotel.com",
+      "photo": "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Southern Comfort Hotel is a classic establishment with Southern charm and hospitality.",
+      "price": 140
+    },
+    {
+      "id": 94826317,
+      "name": "Skyline Tower Hotel",
+      "address": "1010 Highrise Blvd, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-404-555-4567",
+      "website": "https://skylinetowerhotel.com",
+      "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+      "description": "Skyline Tower Hotel is a high-end, modern hotel with panoramic city views.",
+      "price": 300
+    },
+    {
+      "id": 50672931,
+      "name": "Maplewood Lodge",
+      "address": "2020 Greenway St, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 2,
+      "phone_number": "+1-404-555-5678",
+      "website": "https://maplewoodlodge.com",
+      "photo": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "description": "Maplewood Lodge is an affordable hotel for budget travelers in a scenic area.",
+      "price": 90
+    },
+    {
+      "id": 29485763,
+      "name": "Sunset Inn",
+      "address": "3030 Sunset Blvd, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-404-555-6789",
+      "website": "https://sunsetinn.com",
+      "photo": "https://images.unsplash.com/photo-1541085929911-dea736e9287b?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Sunset Inn provides a comfortable and affordable stay with beautiful sunset views.",
+      "price": 120
+    },
+    {
+      "id": 78541239,
+      "name": "Downtown Retreat Hotel",
+      "address": "404 Downtown St, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-404-555-7890",
+      "website": "https://downtownretreathotel.com",
+      "photo": "https://images.unsplash.com/photo-1521783988139-89397d761dce?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Downtown Retreat Hotel is a boutique hotel with modern amenities in the heart of Atlanta.",
+      "price": 200
+    },
+    {
+      "id": 68237491,
+      "name": "Blue Horizon Hotel",
+      "address": "505 Oceanview Dr, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-404-555-9876",
+      "website": "https://bluehorizonhotel.com",
+      "photo": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "description": "Blue Horizon Hotel offers a luxurious stay with a breathtaking skyline view.",
+      "price": 280
+    },
+    {
+      "id": 10394857,
+      "name": "Evergreen Stay",
+      "address": "606 Forest Lane, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-404-555-6543",
+      "website": "https://evergreenstay.com",
+      "photo": "https://images.unsplash.com/photo-1628923139231-55ad0aa6bac7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Evergreen Stay is a peaceful retreat surrounded by nature and fresh air.",
+      "price": 160
+    },
+    {
+      "id": 47382910,
+      "name": "Majestic City Hotel",
+      "address": "707 Urban Ave, Atlanta, GA",
+      "city": "Atlanta",
+      "state": "GA",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-404-555-1122",
+      "website": "https://majesticcityhotel.com",
+      "photo": "https://images.unsplash.com/photo-1445991842772-097fea258e7b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Majestic City Hotel offers an elegant stay with world-class service and top-notch amenities.",
+      "price": 220
+    },
+    {
+      "id": 18273645,
+      "name": "Paradise Springs Resort",
+      "address": "101 Paradise Ave, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-1101",
+      "website": "https://paradisespringsresort.com",
+      "photo": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Paradise Springs Resort offers a premium getaway with top-notch services and scenic beauty.",
+      "price": 330
+    },
+    {
+      "id": 29384756,
+      "name": "Golden Sunset Inn",
+      "address": "202 Sunset Blvd, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-2202",
+      "website": "https://goldensunsetinn.com",
+      "photo": "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Golden Sunset Inn is the perfect place to relax and enjoy beautiful sunset views.",
+      "price": 240
+    },
+    {
+      "id": 37482910,
+      "name": "Serenity Cove Hotel",
+      "address": "303 Tranquility Ln, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-407-555-3303",
+      "website": "https://serenitycovehotel.com",
+      "photo": "https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Serenity Cove Hotel offers a peaceful retreat surrounded by nature and tranquility.",
+      "price": 190
+    },
+    {
+      "id": 48592037,
+      "name": "Magic Gateway Inn",
+      "address": "404 Fantasy Dr, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-4404",
+      "website": "https://magicgatewayinn.com",
+      "photo": "https://images.unsplash.com/photo-1544097935-e6d136448533?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Magic Gateway Inn provides an enchanting stay just minutes away from theme parks.",
+      "price": 300
+    },
+    {
+      "id": 57648392,
+      "name": "Lakeview Escape Hotel",
+      "address": "505 Reflection Rd, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-5505",
+      "website": "https://lakeviewescape.com",
+      "photo": "https://images.unsplash.com/photo-1630660664869-c9d3cc676880?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Lakeview Escape Hotel offers stunning lake views and a relaxing atmosphere.",
+      "price": 220
+    },
+    {
+      "id": 68739284,
+      "name": "Palm Haven Suites",
+      "address": "606 Tropical Blvd, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-407-555-6606",
+      "website": "https://palmhavensuites.com",
+      "photo": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Palm Haven Suites provide affordable comfort with a tropical touch in the heart of Celebration.",
+      "price": 160
+    },
+    {
+      "id": 79834125,
+      "name": "Sunset Harbor Resort",
+      "address": "707 Bayview Ln, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-7707",
+      "website": "https://sunsetharborresort.com",
+      "photo": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Sunset Harbor Resort is a luxury destination with unparalleled waterfront views.",
+      "price": 290
+    },
+    {
+      "id": 80923476,
+      "name": "Cozy Pines Inn",
+      "address": "808 Woodland St, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 2,
+      "phone_number": "+1-407-555-8808",
+      "website": "https://cozypinesinn.com",
+      "photo": "https://images.unsplash.com/photo-1653974123072-cfb9d69725d9?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Cozy Pines Inn is a warm and inviting hotel, ideal for budget-conscious travelers.",
+      "price": 130
+    },
+    {
+      "id": 92034871,
+      "name": "Celebration City Lodge",
+      "address": "909 Downtown Ave, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-9909",
+      "website": "https://celebrationcitylodge.com",
+      "photo": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Celebration City Lodge is a stylish hotel located in the heart of Celebration’s downtown.",
+      "price": 240
+    },
+    {
+      "id": 10394857,
+      "name": "Royal Palms Retreat",
+      "address": "1010 Regal Rd, Celebration, FL",
+      "city": "Celebration",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-1010",
+      "website": "https://royalpalmsretreat.com",
+      "photo": "https://images.unsplash.com/photo-1506180879175-6a5eb3ab9b18?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Palms Retreat offers a high-end vacation experience with premium amenities.",
+      "price": 320
+    },
+    {
+      "id": 11234567,
+      "name": "Edgewood Grand Hotel",
+      "address": "101 Main St, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-217-555-1101",
+      "website": "https://edgewoodgrandhotel.com",
+      "photo": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Edgewood Grand Hotel offers luxurious rooms and top-tier service in the heart of Edgewood.",
+      "price": 310
+    },
+    {
+      "id": 22345678,
+      "name": "Sunrise Lodge",
+      "address": "202 Sunrise Ave, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-217-555-2202",
+      "website": "https://sunriselodgeedgewood.com",
+      "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Sunrise Lodge provides cozy accommodations with scenic nature views.",
+      "price": 220
+    },
+    {
+      "id": 33456789,
+      "name": "Lakeside Retreat Hotel",
+      "address": "303 Lakeside Dr, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-217-555-3303",
+      "website": "https://lakesideretreatedgewood.com",
+      "photo": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Lakeside Retreat Hotel is a peaceful haven by the water, perfect for relaxation.",
+      "price": 180
+    },
+    {
+      "id": 44567890,
+      "name": "Edgewood Comfort Inn",
+      "address": "404 Comfort St, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-217-555-4404",
+      "website": "https://edgewoodcomfortinn.com",
+      "photo": "https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Edgewood Comfort Inn provides home-like comfort with high-end facilities.",
+      "price": 250
+    },
+    {
+      "id": 55678901,
+      "name": "Midwest Serenity Hotel",
+      "address": "505 Tranquil Rd, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-217-555-5505",
+      "website": "https://midwestserenity.com",
+      "photo": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Midwest Serenity Hotel offers a quiet escape with warm hospitality.",
+      "price": 200
+    },
+    {
+      "id": 66789012,
+      "name": "The Pinewood Lodge",
+      "address": "606 Forest Rd, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-217-555-6606",
+      "website": "https://pinewoodlodgeedgewood.com",
+      "photo": "https://images.unsplash.com/photo-1600435335786-d74d2bb6de37?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Pinewood Lodge is a rustic escape nestled among the trees.",
+      "price": 170
+    },
+    {
+      "id": 77890123,
+      "name": "Heritage Square Hotel",
+      "address": "707 Historic Ln, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-217-555-7707",
+      "website": "https://heritagesquarehotel.com",
+      "photo": "https://images.unsplash.com/photo-1587874522487-fe10e954d035?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Heritage Square Hotel blends classic elegance with modern comforts.",
+      "price": 290
+    },
+    {
+      "id": 88901234,
+      "name": "Starlight Inn",
+      "address": "808 Starview St, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 2,
+      "phone_number": "+1-217-555-8808",
+      "website": "https://starlightinnedgewood.com",
+      "photo": "https://images.unsplash.com/photo-1557127275-f8b5ba93e24e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Starlight Inn offers a budget-friendly stay with charming night views.",
+      "price": 140
+    },
+    {
+      "id": 99012345,
+      "name": "Edgewood Downtown Suites",
+      "address": "909 Central Ave, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-217-555-9909",
+      "website": "https://edgewooddowntownsuites.com",
+      "photo": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Edgewood Downtown Suites offer a stylish stay in the heart of the city.",
+      "price": 230
+    },
+    {
+      "id": 10123456,
+      "name": "Royal Gardens Resort",
+      "address": "1010 Regal Gardens Rd, Edgewood, IL",
+      "city": "Edgewood",
+      "state": "IL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-217-555-1010",
+      "website": "https://royalgardensresort.com",
+      "photo": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Gardens Resort offers a lush and elegant stay for visitors seeking luxury.",
+      "price": 320
+    },
+    {
+      "id": 11234367,
+      "name": "Gotha Grand Hotel",
+      "address": "101 Oak St, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-1101",
+      "website": "https://gothagrandhotel.com",
+      "photo": "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Gotha Grand Hotel offers exquisite luxury and top-tier hospitality in the heart of Gotha.",
+      "price": 320
+    },
+    {
+      "id": 22348678,
+      "name": "Sunset Bay Lodge",
+      "address": "202 Sunset Blvd, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-2202",
+      "website": "https://sunsetbaygotha.com",
+      "photo": "https://images.unsplash.com/photo-1605346576608-92f1346b67d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Sunset Bay Lodge provides cozy accommodations with stunning sunset views.",
+      "price": 240
+    },
+    {
+      "id": 334587389,
+      "name": "Lakeside Haven Hotel",
+      "address": "303 Lakeview Dr, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-407-555-3303",
+      "website": "https://lakesidehavengotha.com",
+      "photo": "https://images.unsplash.com/photo-1619128395560-8a749ac9926d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Lakeside Haven Hotel is a tranquil retreat near the lake, ideal for relaxation.",
+      "price": 190
+    },
+    {
+      "id": 445667850,
+      "name": "Gotha Comfort Suites",
+      "address": "404 Comfort St, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-4404",
+      "website": "https://gothacomfortsuites.com",
+      "photo": "https://images.unsplash.com/photo-1621293954908-907159247fc8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Gotha Comfort Suites provides homely comfort with modern amenities.",
+      "price": 260
+    },
+    {
+      "id": 556758401,
+      "name": "Palm Retreat Hotel",
+      "address": "505 Palm Rd, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-5505",
+      "website": "https://palmretreatgotha.com",
+      "photo": "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Palm Retreat Hotel offers a tropical escape with premium service.",
+      "price": 230
+    },
+    {
+      "id": 6678329912,
+      "name": "The Oakwood Lodge",
+      "address": "606 Forest Ave, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-407-555-6606",
+      "website": "https://oakwoodlodgegotha.com",
+      "photo": "https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Oakwood Lodge is a rustic getaway surrounded by nature.",
+      "price": 180
+    },
+    {
+      "id": 77820123,
+      "name": "Historic Gotha Hotel",
+      "address": "707 Heritage Ln, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-7707",
+      "website": "https://historicgothahotel.com",
+      "photo": "https://images.unsplash.com/photo-1552566626-2d907dab0dff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Historic Gotha Hotel offers timeless elegance with modern luxury.",
+      "price": 300
+    },
+    {
+      "id": 889012334,
+      "name": "Blue Sky Inn",
+      "address": "808 Skyview St, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 2,
+      "phone_number": "+1-407-555-8808",
+      "website": "https://blueskyinngotha.com",
+      "photo": "https://images.unsplash.com/photo-1594130139005-3f0c0f0e7c5e?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Blue Sky Inn provides an affordable stay with beautiful sky views.",
+      "price": 150
+    },
+    {
+      "id": 9901234345,
+      "name": "Gotha Downtown Suites",
+      "address": "909 Central Ave, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-407-555-9909",
+      "website": "https://gothadowntownsuites.com",
+      "photo": "https://images.unsplash.com/photo-1505692433770-36f19f51681d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Gotha Downtown Suites provide a contemporary stay in the city center.",
+      "price": 240
+    },
+    {
+      "id": 1012342456,
+      "name": "Royal Palm Resort",
+      "address": "1010 Regal Gardens Rd, Gotha, FL",
+      "city": "Gotha",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-407-555-1010",
+      "website": "https://royalpalmresortgotha.com",
+      "photo": "https://images.unsplash.com/photo-1593006526979-5f8814c229f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Palm Resort offers a high-end experience in a lush setting.",
+      "price": 330
+    },
+    {
+      "id": 21567890,
+      "name": "Haines City Grand Hotel",
+      "address": "120 Lakeview Dr, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-863-555-1212",
+      "website": "https://hainesgrandhotel.com",
+      "photo": "https://images.unsplash.com/photo-1631049035113-4a68ecf80b1c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Haines City Grand Hotel offers top-notch service and luxury accommodations in the heart of the city.",
+      "price": 310
+    },
+    {
+      "id": 32678901,
+      "name": "Palm Breeze Resort",
+      "address": "231 Palm Grove St, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-863-555-2323",
+      "website": "https://palmbreezeresort.com",
+      "photo": "https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Palm Breeze Resort provides a tropical escape with premium amenities and scenic views.",
+      "price": 250
+    },
+    {
+      "id": 43789012,
+      "name": "Lakeshore Inn & Suites",
+      "address": "342 Shoreline Ave, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-863-555-3434",
+      "website": "https://lakeshoreinnhaines.com",
+      "photo": "https://images.unsplash.com/photo-1541971875076-8f970d573be6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Lakeshore Inn & Suites is a peaceful getaway with stunning lake views.",
+      "price": 190
+    },
+    {
+      "id": 54890123,
+      "name": "Haines Comfort Stay",
+      "address": "453 Main St, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-863-555-4545",
+      "website": "https://hainescomfortstay.com",
+      "photo": "https://images.unsplash.com/photo-1592229506151-845940174bb0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Haines Comfort Stay offers a warm and welcoming environment for all travelers.",
+      "price": 270
+    },
+    {
+      "id": 65901234,
+      "name": "Cypress Grove Hotel",
+      "address": "564 Cypress Blvd, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-863-555-5656",
+      "website": "https://cypressgrovehaines.com",
+      "photo": "https://images.unsplash.com/photo-1508253578933-20b529302151?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Cypress Grove Hotel is surrounded by lush greenery and offers a tranquil retreat.",
+      "price": 230
+    },
+    {
+      "id": 76012345,
+      "name": "Sunrise Valley Lodge",
+      "address": "675 Sunrise Ave, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 3,
+      "phone_number": "+1-863-555-6767",
+      "website": "https://sunrisevalleylodge.com",
+      "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Sunrise Valley Lodge offers stunning morning views and a peaceful atmosphere.",
+      "price": 180
+    },
+    {
+      "id": 87123456,
+      "name": "Haines City Historic Hotel",
+      "address": "786 Heritage Dr, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-863-555-7878",
+      "website": "https://historicHainesHotel.com",
+      "photo": "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Haines City Historic Hotel blends timeless elegance with modern luxury.",
+      "price": 290
+    },
+    {
+      "id": 98234567,
+      "name": "Blue Horizon Inn",
+      "address": "897 Ocean Breeze Rd, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 2,
+      "phone_number": "+1-863-555-8989",
+      "website": "https://bluehorizoninn.com",
+      "photo": "https://images.unsplash.com/photo-1675409145919-277c0fc2aa7d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Blue Horizon Inn offers an affordable stay with beautiful scenic views.",
+      "price": 160
+    },
+    {
+      "id": 10945678,
+      "name": "Haines City Downtown Suites",
+      "address": "908 Market St, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 4,
+      "phone_number": "+1-863-555-9090",
+      "website": "https://hainesdowntownsuites.com",
+      "photo": "https://images.unsplash.com/photo-1654064550568-fb282026c165?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Haines City Downtown Suites offers modern accommodations in a vibrant location.",
+      "price": 240
+    },
+    {
+      "id": 21056789,
+      "name": "Golden Palm Resort",
+      "address": "1010 Sunset Blvd, Haines City, FL",
+      "city": "Haines City",
+      "state": "FL",
+      "country_code": "US",
+      "hotel_rating": 5,
+      "phone_number": "+1-863-555-1010",
+      "website": "https://goldenpalmresort.com",
+      "photo": "https://images.unsplash.com/photo-1692690134767-90bcc75d5653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Golden Palm Resort offers a luxurious stay with world-class amenities.",
+      "price": 330
     }
   ]
 }

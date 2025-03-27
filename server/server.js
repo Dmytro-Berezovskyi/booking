@@ -16,11 +16,26 @@ app.get("/destination", (req, res) => {
 });
 
 app.get("/hotels", (req, res) => {
-    const { page= 1, limit = 6 } = req.query;
+    const { page= 1, limit = 6, sortBy } = req.query;
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + parseInt(limit);
+    console.log(req.query);
 
-    const paginatedHotels = data.hotels.slice(startIndex, endIndex);
+    let sortedHotels = [...data.hotels];
+
+    if (sortBy === "priceLowest") {
+        sortedHotels.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "priceHighest") {
+        sortedHotels.sort((a, b) => b.price - a.price);
+    }
+
+    if (sortBy === "ratingHigh") {
+        sortedHotels.sort((a, b) => b.hotel_rating - a.hotel_rating);
+    } else if (sortBy === "ratingLow") {
+        sortedHotels.sort((a, b) => a.hotel_rating - b.hotel_rating);
+    }
+
+    const paginatedHotels = sortedHotels.slice(startIndex, endIndex);
 
     res.status(200).json ({
         hotels: paginatedHotels,
@@ -39,11 +54,24 @@ app.get("/hotels/:id", (req, res) => {
     }
 });
 
+app.get("/search", (req, res) => {
+    const { query } = req.query;
+    if (!query) {
+        return res.status(400).json({ message: "Потрібно ввести назву готелю" });
+    }
+
+    const hotels = data.hotels
+        .filter((hotel) => hotel.name.toLowerCase().includes(query.toLowerCase()))
+        .slice(0, 4);
+
+    res.json(hotels);
+})
+
 app.post("/hotels", (req, res) => {
     const { city } = req.body;
     const hotels = data.hotels.filter((hotel) => hotel.city === city);
 
-    res.json(hotels);
+    res.status(200).json(hotels);
 });
 
 const PORT = 3001;
