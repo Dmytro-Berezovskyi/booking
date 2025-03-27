@@ -13,8 +13,6 @@ export default function Hotels() {
         setSortBy(value);
     }
 
-    console.log(sortBy);
-
     return (
         <>
             <Divider orientation="left" style={{borderColor: (themeMode === "dark" ? "rgba(255,255,255,0.20)" : "rgba(5,5,5,0.06)")}}>
@@ -49,7 +47,7 @@ export default function Hotels() {
                 />
             </Flex>
 
-            <HotelsItem/>
+            <HotelsItem sortBy={sortBy} />
         </>
     )
 }

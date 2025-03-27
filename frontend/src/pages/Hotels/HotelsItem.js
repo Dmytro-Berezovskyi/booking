@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -8,14 +9,19 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 import "./style.css";
 
-export default function HotelsItem() {
+export default function HotelsItem({sortBy}) {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const hotels = useSelector((state) => state.hotels)
     const dispatch = useDispatch();
+    console.log(sortBy);
 
     const handlePageChange = (page) => {
-        dispatch(fetchHotels({page: page}));
+        dispatch(fetchHotels({page: page, sortBy}));
     };
+
+    useEffect(() => {
+        dispatch(fetchHotels({ page: 1, sortBy }));
+    }, [dispatch, sortBy]);
 
     return (
         <>

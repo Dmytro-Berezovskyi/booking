@@ -3,9 +3,12 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-export const fetchHotels = createAsyncThunk("hotels/fetchHotels", async ({ page = 1, limit = 6 }, { rejectWithValue }) => {
+export const fetchHotels = createAsyncThunk("hotels/fetchHotels", async ({ page = 1, limit = 6, sortBy = "" }, { rejectWithValue }) => {
     try {
-        const hotels = await axios.get(`${API_URL}/hotels`, {params: { page, limit }});
+        const params = {page, limit};
+        if (sortBy) params.sortBy = sortBy;
+
+        const hotels = await axios.get(`${API_URL}/hotels`, { params });
 
         return ({
             hotels: hotels.data.hotels,
