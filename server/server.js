@@ -5,7 +5,7 @@ const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const data = require("./db.json");
-const { json } = require("express");
+const { json, query} = require("express");
 
 const app = express();
 app.use(cors());
@@ -16,22 +16,21 @@ app.get("/destination", (req, res) => {
 });
 
 app.get("/hotels", (req, res) => {
-    const { page= 1, limit = 6, sortBy } = req.query;
+    const { page= 1, limit = 6, sort } = req.query;
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + parseInt(limit);
-    console.log(req.query);
 
     let sortedHotels = [...data.hotels];
 
-    if (sortBy === "priceLowest") {
+    if (sort === "priceLowest") {
         sortedHotels.sort((a, b) => a.price - b.price);
-    } else if (sortBy === "priceHighest") {
+    } else if (sort === "priceHighest") {
         sortedHotels.sort((a, b) => b.price - a.price);
     }
 
-    if (sortBy === "ratingHigh") {
+    if (sort === "ratingHigh") {
         sortedHotels.sort((a, b) => b.hotel_rating - a.hotel_rating);
-    } else if (sortBy === "ratingLow") {
+    } else if (sort === "ratingLow") {
         sortedHotels.sort((a, b) => a.hotel_rating - b.hotel_rating);
     }
 
