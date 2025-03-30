@@ -36,9 +36,11 @@ export default function Hotels() {
                 </h4>
                 <Select
                     placeholder="Sort by:"
+                    value={sortBy !== "Cancel sorting" && sortBy !== "" ? sortBy : null}
                     style={{width: 200}}
                     onChange={handleChange}
                     options={[
+                        {value: "Cancel sorting", label: "Cancel sorting"},
                         {value: "priceLowest", label: "Price (lowest first)"},
                         {value: "priceHighest", label: "Price (highest first)"},
                         {value: "ratingHigh", label: "Rating (high to low)"},

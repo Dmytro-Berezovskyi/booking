@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -13,15 +13,29 @@ export default function HotelsItem({sortBy}) {
     const themeMode = useSelector((state) => state.theme.themeMode);
     const hotels = useSelector((state) => state.hotels)
     const dispatch = useDispatch();
-    console.log(sortBy);
 
-    const handlePageChange = (page) => {
-        dispatch(fetchHotels({page: page, sortBy}));
-    };
+    const [sort, setSort] = useState("");
 
     useEffect(() => {
-        dispatch(fetchHotels({ page: 1, sortBy }));
-    }, [dispatch, sortBy]);
+        if (sortBy) {
+            localStorage.setItem("sort", JSON.stringify(sortBy));
+        }
+    });
+    useEffect(() => {
+        const sort = JSON.parse(localStorage.getItem("sort"));
+
+        if (sort) {
+            setSort(sort)
+        }
+    })
+
+    useEffect(() => {
+        dispatch(fetchHotels({ page: 1, sort }));
+    }, [dispatch, sort]);
+
+    const handlePageChange = (page) => {
+        dispatch(fetchHotels({page: page, sort}));
+    };
 
     return (
         <>
@@ -35,21 +49,32 @@ export default function HotelsItem({sortBy}) {
                                     <div style={{background: "grey", height: "150px"}}>
                                         <img
                                             src={hotel.photo} alt="hotel photo"
-                                            style={{width:"100%",height:"100%", objectFit: "cover"}}
+                                            style={{width: "100%", height: "100%", objectFit: "cover"}}
                                         />
                                     </div>
                                     <h3>{hotel.name}</h3>
                                 </NavLink>
-                                <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>City: {hotel.city}</span>
-                                <span style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>Address: {hotel.address}</span>
+                                <span style={{
+                                    fontWeight: "bold",
+                                    fontSize: "18px",
+                                    color: (themeMode === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)")
+                                }}
+                                >
+                                    Price per night: {hotel.price}$
+                                </span>
+                                <span
+                                    style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>City: {hotel.city}</span>
+                                <span
+                                    style={{color: (themeMode === "dark" ? "#FFFFFF" : "#000000")}}>Address: {hotel.address}</span>
                             </div>
 
                             <Divider style={{borderWidth: "3px"}}/>
-                        </Col>})}
+                        </Col>
+                    })}
                 </Row>
-            ): (
-                <div style={{display: "flex", justifyContent: "center", gap:"10px", margin: "20px"}}>
-                    <LoadingOutlined />
+            ) : (
+                <div style={{display: "flex", justifyContent: "center", gap: "10px", margin: "20px"}}>
+                    <LoadingOutlined/>
                     <span style={{fontSize: "20px"}}>Loading...</span>
                 </div>
             )}
